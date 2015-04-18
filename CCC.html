@@ -12,15 +12,32 @@
   a {color:cyan;}
   p {color:cyan;}
   table {color:cyan;}
-  html
-  {
+  html {
 	background: url("Background.jpg") no-repeat center center fixed;
 	background-size: 100% 100%;
   }
+  div.background
+{
+	background: url("Background.jpg") no-repeat center center fixed;
+	background-size: 100% 100%;
+}
+div.transbox
+{
+  margin: 30px;
+  background-color:rgba(0,0,0,.4);
+  border: 1px solid black;
+  filter:alpha(opacity=60); /* For IE8 and earlier */
+}
+div.transbox p
+{
+  margin: 5%;
+  font-weight: bold;
+  color: #00ffff;
+}
 </style>
 </head>
-<body>
-
+<body><div class="background">
+<div class="transbox">
 <h1><center>CCC Rules</h1>
   <p>In this version of (sort of) Dungeons and Dragons, the GM will not be playing as a character.  Instead, it will just be up to the three adventurers,
   and it makes it a lot easier for me to run the game without having to worry about my character.  The reason why it will be easier is because in this version,
@@ -33,6 +50,10 @@
   there is nothing stopping you from doing whatever you want in this game, with a couple of exceptions that you will see in the game.</p>
     
 <h1><center>Character Classes</h1>
+
+</div>
+</div>
+
 
 <div class="tabs">
     <ul class="tab-links">
