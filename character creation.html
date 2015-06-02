@@ -1,0 +1,471 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="CCC.css">
+	<link rel="shortcut icon" href="favicon.jpg"/>
+<title>Character Creation</title>
+<style>
+  h1 {font-family:calibri;}
+  h1{font-size:200%;}
+  h1 {color:cyan;}
+  a {color:cyan;}
+  p {color:cyan;}
+  table {color:cyan;}
+  html {
+	background: url("Background.jpg") no-repeat center center fixed;
+	background-size: 100% 100%;
+  }
+  div.background
+{
+	background: url("Background.jpg") no-repeat center center fixed;
+	background-size: 100% 100%;
+}
+div.transbox
+{
+  margin: 30px;
+  background-color:rgba(0,0,0,.4);
+  border: 1px solid black;
+  filter:alpha(opacity=60); /* For IE8 and earlier */
+}
+div.transbox p
+{
+  margin: 5%;
+  font-weight: bold;
+  color: #00ffff;
+}
+</style>
+</head>
+
+<div class="background">
+<div class="transbox">
+
+<h1><center>Races</h1>
+
+<div class="tabs">
+    <ul class="tab-links">
+        <li class="active"><a href="#tab1">Dwarf</a></li>
+        <li><a href="#tab2">Gnome</a></li>
+        <li><a href="#tab3">Elf</a></li>
+		<li><a href="#tab4">Kobold</a></li>
+    </ul>
+	
+	<div class="tab-content">
+        <div id="tab1" class="tab active">
+            <table
+	style="width:90%"
+	align="center"
+	cellspacing="20"
+	cellpadding="10"
+	>
+  <tr>
+	<td><center>Race Ability</td>
+	<td><center>Golden Inheritance</td>
+	<th colspan="7"><center>Your character starts with an additional 1000 gold.  The next character you create is allowed to start with one of the treasure items you acquire from this character.</th>
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+	<td><center>Variant</td>
+	<td><center>Hill Dwarf</td>
+	<td><center>Adrenaline</td>
+	<th colspan="6"><center>Anytime a character is defeated by an ally or neutral NPC, you may use a basic attack on a target adjacent to you even if it is not currently your turn.</th>
+  </tr>
+	<td></td>
+	<td><center>Tall Dwarf</td>
+	<td><center>Dual Wield</td>
+	<th colspan="6"><center>Allows you to use a basic attack each turn instead of moving if you are wielding two melee weapons.</th>
+  </tr>
+</table>
+        </div>
+		
+		<div id="tab2" class="tab">
+            <table
+	style="width:90%"
+	align="center"
+	cellspacing="20"
+	cellpadding="10"
+	>
+  <tr>
+	<td><center>Race Ability</td>
+	<td><center>Technological Preference</td>
+	<th colspan="7"><center>You start with one less character ability, but four random treasure cards.  You may use an Item or Treasure card consumable or ability instead of moving each turn.</th>
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+	<td><center>Variant</td>
+	<td><center>Keen</td>
+	<td><center>Passback</td>
+	<th colspan="6"><center>You may use any treasure card item your allies have during your turn as if you also had it as long as you are within 10 spaces of each other and have line of sight.</th>
+  </tr>
+	<td></td>
+	<td><center>Okagnoma</td>
+	<td><center>Tinker</td>
+	<th colspan="6"><center>You may take any two treasure cards and trade them in for a random treasure card.  If used in combat, you may also use the new treasure.</th>
+  </tr>
+</table>
+        </div>
+		
+		<div id="tab3" class="tab">
+            <table
+	style="width:90%"
+	align="center"
+	cellspacing="20"
+	cellpadding="10"
+	>
+  <tr>
+	<td><center>Race Ability</td>
+	<td><center>Master of Magic<td>
+	<th colspan="6"><center>You can have a total of five abilities from two different classes if they are spell abilities.</th>
+  </tr>
+  <tr>
+	<td><center>Variant</td>
+	<td><center>Spellblade</td>
+	<td><center>Spellblade</td>
+	<th colspan="6"><center>After casting a special ability, you may also use a basic attack on an adjacent target.</th>
+  </tr>
+</table>
+        </div>
+		
+		<div id="tab4" class="tab">
+            <table
+	style="width:90%"
+	align="center"
+	cellspacing="20"
+	cellpadding="10"
+	>
+  <tr>
+	<td><center>Race Ability</td>
+	<td><center>Fortunately Unfortunate</td>
+	<th colspan="7"><center>Kobalds always roll two dice and choose which die they want to use, however rolling a 1 on either die will always cause a critical fail.  You should always treat anytime you have to roll a die as rolling both.</th>
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+	<td><center>Variant</td>
+	<td><center>Triton Ground</td>
+	<td><center>Berserking</td>
+	<th colspan="6"><center>During your turn of combat, rolling a critical grants you an additional action.</th>
+  </tr>
+</table>
+        </div>
+    </div>
+</div>
+
+<h1><center>Classes</h1>
+
+<div class="tabs">
+    <ul class="tab-links">
+        <li class="active"><a href="#tab11">Warrior</a></li>
+        <li><a href="#tab12">Paladin</a></li>
+        <li><a href="#tab13">Bard</a></li>
+        <li><a href="#tab14">Lumberjack</a></li>
+		<li><a href="#tab15">Monk</a></li>
+		<li><a href="#tab16">Sorcerer</a></li>
+    </ul>
+ 
+    <div class="tab-content">
+        <div id="tab11" class="tab active">
+            <table
+	style="width:90%"
+	align="center"
+	cellspacing="20"
+	cellpadding="10"
+	>
+  <tr>
+	<td><center>Skills</td>
+	<td><center>Stamina Cost</td>
+	<th colspan="7"><center>Effect</th>
+  </tr>
+  <tr>
+	<td><center>Whirlwind</td>
+	<td><center>3</td>
+	<th colspan="6"><center>Begin a whirlwind that allows you to move every time a target finishes their turn.  You may move 1 space and then deal 2 damage to targets in melee range.  At the start of your next turn, you become confused.</th>
+	<td><center><img src="symbols\melee.png" alt="Melee"><td>
+  </tr>
+  <tr>
+	<td><center>Blockade</td>
+	<td><center>1</td>
+	<th colspan="6"><center>Raise up your shield preventing all damage to you and anyone directly behind you for this turn, as long as you keep your balance.  While blocking, you cannot be moved.  Your allies may move you during their turn against your will instead of moving themselves.</th>
+	<td><center><img src="symbols\buff.png" alt="Buff"></td>
+	</tr>
+  <tr>
+	<td><center>Charge</td>
+	<td><center>1</td>
+	<th colspan="6"><center>Run forward as fast as you can in a straight line dealing 3 damage and pushing any target you run into.  Allies may roll to jump on your back and avoid this damage.  You can stop at any time or until you hit a wall.</th>
+	<td><center><img src="symbols\range10.png" alt="Range10"></td>
+	</tr>
+  <tr>
+	<td><center>Tosser</td>
+	<td><center>1</td>
+	<th colspan="6"><center>Lift an adjacent target and throw them at another target square.  Both targets take 5 damage and are stunned for their next round of combat.  Allies can roll to avoid the damage and, if successful, may also attack or use an ability.</th>
+	<td><center><img src="symbols\range5.png" alt="Range5"><td>
+  </tr>
+  <tr>
+	<td><center>Chivalry</td>
+	<td><center>1</td>
+	<th colspan="6"><center>Jump to the aid of a nearby target taking all damage they would have taken from an attack.</th>
+	<td><center><img src="symbols\range5.png" alt="Range5"><img src="symbols\anytime.png" alt="Anytime"></td>
+	</tr>
+</table>
+        </div>
+		
+		<div id="tab12" class="tab">
+            <table
+	style="width:90%"
+	align="center"
+	cellspacing="20"
+	cellpadding="10"
+	>
+  <tr>
+	<td><center>Skills</td>
+	<td><center>Stamina Cost</td>
+	<th colspan="7"><center>Effect</th>
+  </tr>
+  <tr>
+	<td><center>Honor Chains</td>
+	<td><center>1</td>
+	<th colspan="6"><center>Shackle a target using chains made out of pure light to another target, object, or the ground.  Target will not be able to move until freeing themselves from the shackles.  A paladin may break the chains by whispering an ancient password of honor that they choose.</th>
+	<td><center><img src="symbols\spell.png" alt="Spell"><img src="symbols\range5.png" alt="Range5"></td>
+	</tr>
+  <tr>
+	<td><center>Blessing of Strength</td>
+	<td><center>3</td>
+	<th colspan="6"><center>Cast a blessing on a target that causes them to do double damage until the end of combat.  For allies, they must yell a phrase chosen by the paladin at the time this ability is used when they attack.  If they forget to yell this phrase, the attack will fail.  Only one target may be affected by Blessing of Strength at any time.</th>
+	<td><center><img src="symbols\spell.png" alt="Spell"><img src="symbols\range10.png" alt="Range10"><center><img src="symbols\anytime.png" alt="Anytime"><img src="symbols\buff.png" alt="Buff"></td>
+  </tr>
+  <tr>
+	<td><center>Divine Intervention</td>
+	<td><center>3</td>
+	<th colspan="6"><center>You may force a reroll for yourself, allies, or foes.  This ability can be used as many times as you like, but the stamina cost is increased by one for multiple divine interventions.</th>
+	<td><center><img src="symbols\spell.png" alt="Spell"><img src="symbols\anytime.png" alt="Anytime"></td>
+ </tr>
+  <tr>
+	<td><center>Righteous Fury</td>
+	<td><center>All remaining stamina minus 1</td>
+	<th colspan="6"><center>Release all of your inner holy power in the form of a single attack.  This strike will deal 25 damage in a 3 square radius centered on your target to all demons, undead, and children.  This ability is only usable if a party member dies.</th>
+  </tr>
+  <tr>
+	<td><center>Unholy Water</td>
+	<td><center>1</td>
+	<th colspan="6"><center>Throw a flask of Unholy Water at a target within 5 spaces.  If the flask hits, you may prevent that target from doing an action, attack, or move once, and instead do something else that you suggest.  This effect lasts until the end of combat.</th>
+  </tr>
+  <tr>
+	<td><center>Holy Light</td>
+	<td><center>3</td>
+	<th colspan="6"><center>Release a wave of light onto a target within 10 spaces that restores stamina equal to the die rolled with this ability.  Can also be used to damage Undead targets.  Using this ability on yourself reduces its effectiveness in half.</th>
+  </tr>
+  </table>
+        </div>
+		
+		<div id="tab13" class="tab">
+            <table
+	style="width:90%"
+	align="center"
+	cellspacing="20"
+	cellpadding="10"
+	>
+  <tr>
+	<td><center>Skills</td>
+	<td><center>Stamina Cost</td>
+	<th colspan="7"><center>Effect</th>
+  </tr>
+  <tr>
+	<td><center>Borrow</td>
+	<td><center>1</td>
+	<th colspan="6"><center>Use an allies' ability.  If the cost of that ability is more than the cost of Borrow, pay that cost instead.  When borrowing an ability, you must say "Yoink", or said ability will fail.</th>
+  </tr>
+  <tr>
+	<td><center>Charm</td>
+	<td><center>3</td>
+	<th colspan="6"><center>Attempt to charm a target.  If successful, you control their actions on their turns until they break free.</th>
+	<td><center><img src="symbols\range5.png" alt="Range5"><img src="symbols\pet1.png" alt="Pet1"></td>
+  </tr>
+  <tr>
+	<td><center>Double Down</td>
+	<td><center>3</td>
+	<th colspan="6"><center>Proclaim that you wish to double something.  Damage, size, or effect of a spell.  If the host deems this acceptable, roll a die.  Should you succeed, said something is doubled.  Should you fail, you take 5 damage and are shamed.</th>
+	<td><center><img src="symbols\anytime.png" alt="Anytime"></td>
+  </tr>
+  <tr>
+	<td><center>Lullaby</td>
+	<td><center>3</td>
+	<th colspan="6"><center>Sing an impromptu song to the table that relates to the events currently unfolding.  If your song should impress the Game Master, you may put all enemies who hear it to sleep.</th>
+	<td><center><img src="symbols\range10.png" alt="Range10"></td>
+  </tr>
+  <tr>
+	<td><center>Disguise</td>
+	<td><center>3</td>
+	<th colspan="6"><center>Change the voice of your character.  If your new voice is believable, you may take on the shape of any creature or race until you stop doing the voice, in which case the spell breaks and you are returned to normal.</th>
+	<td><center><img src="symbols\spell.png" alt="Spell"><img src="symbols\buff.png" alt="Buff"></td>
+  </tr>
+  </table>
+        </div>
+		
+		<div id="tab14" class="tab">
+            <table
+	style="width:90%"
+	align="center"
+	cellspacing="20"
+	cellpadding="10"
+	>
+  <tr>
+	<td><center>Skills</td>
+	<td><center>Stamina Cost</td>
+	<th colspan="7"><center>Effect</th>
+  </tr>
+  <tr>
+	<td><center>Paincake</td>
+	<td><center>1</td>
+	<th colspan="6"><center>Throw a stale pancake at a target within deal 3 damage.  Your experience in great northern tradition of paincake tossing allows you to try to bank the paincake off as many targets as you like until you fail a roll.  Failing a roll, however, will force you to take 1 damage for the number of bounces you went for.  For shame.</th>
+	<td><center><img src="symbols\range5.png" alt="Range5"></td>
+  </tr>
+  <tr>
+	<td><center>Mount</td>
+	<td><center>1</td>
+	<th colspan="6"><center>Climb on top of a target and attempt to dominate it.  If successful, you now play for the target on their turns.  They can attempt to throw you off each turn.  On your turns, you must roll to attempt to move with whatever you mounted.</th>
+	<td><center><img src="symbols\melee.png" alt="melee"></td>
+  </tr>
+  <tr>
+	<td><center>Yodel</td>
+	<td><center>1</td>
+	<th colspan="6"><center>Release a powerful yodel in a direction that dazes targets, making them less likely to hit with their attacks.  The sound waves of the yodel are so powerful, it is possible to bank them off walls and knock small objects over.</th>
+	<td><center><img src="symbols\spell.png" alt="Spell"><img src="symbols\range10.png" alt="Range10"><img src="symbols\anytime.png" alt="Anytime"></td>
+  </tr>
+  <tr>
+	<td><center>Earthquake</td>
+	<td><center>3</td>
+	<th colspan="6"><center>The lumberjack slams the butt of his axe down into the ground and causes tremors to rip the earth apart.  Select up to 6 squares in a 10 block radius to become pitfalls, preventing targets from moving past them.  If you select a square with a target already on it, the target will take 2 damage instead.</th>
+	<td><center><img src="symbols\spell.png" alt="Spell"><img src="symbols\range10.png" alt="Range10"></td>
+  </tr>
+  <tr>
+	<td><center>Woodland Companion</td>
+	<td><center>3</td>
+	<th colspan="6"><center>Summon a Woodland Companion to your side as a pet.  Your pet deals 2 damage and when attacked you must either take all damage for them or release them.  You play for your pet on your turns.  You must name your pet and not disrespect it or it will leave you forever.  The creature who will be your Woodland Companion is determined at character creation.</th>
+	<td><center><img src="symbols\pet1.png" alt="Pet1"></td>
+  </tr>
+  </table>
+        </div>
+		
+		<div id="tab15" class="tab">
+            <table
+	style="width:90%"
+	align="center"
+	cellspacing="20"
+	cellpadding="10"
+	>
+  <tr>
+	<td><center>Skills</td>
+	<td><center>Stamina Cost</td>
+	<th colspan="6"><center>Effect</th>
+  </tr>
+  <tr>
+	<td><center>Shift Style Punch</td>
+	<td><center>3</td>
+	<th colspan="6"><center>Unleash a series of punches that each deal 1 damage.  For each punch, you only fail if you roll a 1 plus however many punches you have done so far.  With each punch, you can move one space and even change targets.  If you manage to punch 7 times in a row, all targets take an aditional 2 damage for each punch.</th>
+  </tr>
+  <tr>
+	<td><center>Nimbus Familiar</td>
+	<td><center>N/A</td>
+	<th colspan="6"><center>At all times, a small cloud will follow you around.  Your Nimbus cannot be attacked or hurt by physical damage.  Once per round of combat, your Nimbus may intervene by moving a target or object of normal size 1 space.  This may be used at any time.  Your Nimbus must represent a person in your life who has passed on.</th>
+  </tr>
+  <tr>
+	<td><center>Soothe Spirits</td>
+	<td><center>3</td>
+	<th colspan="6"><center>Attemps to soothe the inner spirit of a target, reducing hatred, aggression, fear, or an emotion of your choice.  If successful,the target won't be able to feel that emotion for one day.  Mutliple targets are allowed, but at the expense of effectiveness.</th>
+  </tr>
+  <tr>
+	<td><center>Force Pillar</td>
+	<td><center>3</td>
+	<th colspan="6"><center>Using your inner spirit, bend a square pillar out of the ground, walls, or ceilings of a solid surface to create a wall.  Targets in the space you summon this will attempt to roll away or take 1 damage.  This ability can be used at any time, even to interrupt another action currently in play.</th>
+	<td><center><img src="symbols\spell.png" alt="Spell" hspace="20"><img src="symbols\range10.png" alt="Range10" hspace="20"><center><img src="symbols\anytime.png" alt="Anytime" hspace="20"></td>
+  </tr>
+  <tr>
+	<td><center>Spirit Rush</td>
+	<td><center>3</td>
+	<th colspan="6"><center>Begin a meditation ritual that will cause you to skip your next two turns.  You will be unable to dodge or react in this state.  On the third turn after using Spirit Rush, you may play all three turns of combat.  These turns cannot be saved and must be used immediately.</th>
+  </tr>
+  </table>
+        </div>
+		
+		<div id="tab16" class="tab">
+            <table
+	style="width:90%"
+	align="center"
+	cellspacing="20"
+	cellpadding="10"
+	>
+  <tr>
+	<td><center>Skills</td>
+	<td><center>Stamina Cost</td>
+	<th colspan="6"><center>Effect</th>
+  </tr>
+  <tr>
+	<td><center>Ray of Frost</td>
+	<td><center>1</td>
+	<th colspan="6"><center>Shoot forth a beam of ice that deals 2 damage and freezes a target in place, stunning them for a turn.  When using this attack, you may make a joke.  If the table deems your pun clever enough, you may use another action that is not one of your class skills.</th>
+	<td><center><img src="symbols\spell.png" alt="Spell"><img src="symbols\range5.png" alt="Range5"></td>
+  </tr>
+  <tr>
+	<td><center>Blink</td>
+	<td><center>3</td>
+	<th colspan="6"><center>Teleport up to 10 spaces away and interrupt another target's turn with one of your own.  You may treat this as a completely separate bonus turn, play it out, and then resume with where you left off.  Using this ability has the chance of making you very dizzy.</th>
+	<td><center><img src="symbols\spell.png" alt="Spell"><img src="symbols\range10.png" alt="Range10"><img src="symbols\anytime.png" alt="Anytime"></td>
+  </tr>
+  <tr>
+	<td><center>Enlarge</td>
+	<td><center>3</td>
+	<th colspan="6"><center>Dramatically change the size of a target or object increasing it up to 4 times it's normal size.  This transformation will only last a few minutes, but it will increase the target's size, strength, and stamina for the duration.  A low roll can have an inverse effect so use with caution.</th>
+	<td><center><img src="symbols\spell.png" alt="Spell"><img src="symbols\range5.png" alt="Range5"><img src="symbols\buff.png" alt="Buff"></td>
+  </tr>
+  <tr>
+	<td><center>Flare</td>
+	<td><center>1</td>
+	<th colspan="6"><center>Summon forth a powerful ball of light in your hands that can be thrown for 5 damage.  You are able to change the properties of this ball in many ways.  You can specialize to blind or burn; change its size for distance or power; have it explode on contact; split into 3 separate balls.  The more complex you make it, the harder it will be to successfully cast.</th>
+	<td><center><img src="symbols\spell.png" alt="Spell"><img src="symbols\range5.png" alt="Range5"></td>
+  </tr>
+  <tr>
+	<td><center>Rolling Fog</td>
+	<td><center>3</td>
+	<th colspan="6"><center>Create a dense fog at target location.  The fog expands to a nearby space each turn until it has expanded 12 times.  The fog will naturally morph to protect the Sorcerer, but not his allies.  The fog makes moving and attacking through it much more difficult for everyone except the Sorcerer.  The fog is also flammable.</th>
+	<td><center><img src="symbols\spell.png" alt="Spell"><img src="symbols\range5.png" alt="Range5"></td>
+  </tr>
+  </table>
+        </div>
+    </div>
+</div>
+
+<p>At the start of a campaign, create a character that consists of a race, a race variant, and a class with three abilities, unless stated otherwise.</p>
+<p>At this time, you may apply any passive race abilities.  i.e. Dwarves gain an additional 1000 gold, Gnomes get four random treasure cards, etc.</p>
+
+<!--  Still in testing
+<form action="C:\Users\Daneler Hostcrexcum\Desktop\Games\D&D\Character Stats Website\cvee_stats\create character\races.html">
+    <input type="submit" value="Create Character">
+</form>
+-->
+
+<p align="right"><a href="index.html">Create Character</a></p>
+
+</div>
+  
+	<script src="jquery.js"></script>
+    <script>
+
+jQuery(document).ready(function() {
+    jQuery('.tabs .tab-links a').on('click', function(e)  {
+        var currentAttrValue = jQuery(this).attr('href');
+ 
+        // Show/Hide Tabs
+        jQuery('.tabs ' + currentAttrValue).show().siblings().hide();
+ 
+        // Change/remove current tab to active
+        jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
+ 
+        e.preventDefault();
+    });
+ });
+ 
+    </script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="CCC.css">
+	<link rel="shortcut icon" href="favicon.jpg"/>
+<title>Character Creation</title>
+<style>
+  h1 {font-family:calibri;}
+  h1{font-size:200%;}
+  h1 {color:cyan;}
+  a {color:cyan;}
+  p {color:cyan;}
+  table {color:cyan;}
+  html {
+	background: url("Background.jpg") no-repeat center center fixed;
+	background-size: 100% 100%;
+  }
+  div.background
+{
+	background: url("Background.jpg") no-repeat center center fixed;
+	background-size: 100% 100%;
+}
+div.transbox
+{
+  margin: 30px;
+  background-color:rgba(0,0,0,.4);
+  border: 1px solid black;
+  filter:alpha(opacity=60); /* For IE8 and earlier */
+}
+div.transbox p
+{
+  margin: 5%;
+  font-weight: bold;
+  color: #00ffff;
+}
+<script language="JavaScript" src="scripts/gen_validatorv31.js" type="text/javascript"></script>
+</style>
+</head>
+
+<div class="background">
+<div class="transbox">
+
+<h1><center>Who are you?</h1>
+
+<form method="post" name="myemailform" action="form-to-email.php" action="C:\Users\Daneler Hostcrexcum\Desktop\Games\D&D\Character Stats Website\cvee_stats\create character\confirmation.html">
+	<p>
+		<label for='name'>Enter Name: </label><br>
+		<input type="text" name="name">
+	</p>
+	<p>
+		<label for='email'>Enter Email Address:</label><br>
+		<input type="text" name="email">
+	</p>
+	<p><input type="radio" name="sex" value="male">Male<INPUT TYPE="checkbox" NAME="whirlwind" onClick="return KeepCount()"> Whirlwind</p>
+	<p><input type="radio" name="sex" value="female">Female<INPUT TYPE="checkbox" NAME="blockade" onClick="return KeepCount()"> Blockade</p>
+	
+	<p><input type="radio" name="race" value="dwarf" checked>Dwarf<INPUT TYPE="checkbox" NAME="charge" onClick="return KeepCount()"> Charge</p>
+	<p><input type="radio" name="variant" value="hill" checked>Hill Dwarf<INPUT TYPE="checkbox" NAME="tosser" onClick="return KeepCount()"> Tosser</p>
+	<p><input type="radio" name="class" value="warrior" checked>Warrior<INPUT TYPE="checkbox" NAME="chivalry" onClick="return KeepCount()"> Chivalry</p>
+	
+	<p><INPUT TYPE="checkbox" NAME="whirlwind" onClick="return KeepCount()"> Whirlwind</p>
+	<p><INPUT TYPE="checkbox" NAME="blockade" onClick="return KeepCount()"> Blockade</p>
+	<p><INPUT TYPE="checkbox" NAME="charge" onClick="return KeepCount()"> Charge</p>
+	<p><INPUT TYPE="checkbox" NAME="tosser" onClick="return KeepCount()"> Tosser</p>
+	<p><INPUT TYPE="checkbox" NAME="chivalry" onClick="return KeepCount()"> Chivalry</p>
+	
+	<input type="submit" name='submit' value="submit">
+</form>
+<script language="JavaScript">
+// Code for validating the form
+// Visit http://www.javascript-coder.com/html-form/javascript-form-validation.phtml
+// for details
+var frmvalidator  = new Validator("myemailform");
+frmvalidator.addValidation("name","req","Please provide your name"); 
+frmvalidator.addValidation("email","req","Please provide your email"); 
+frmvalidator.addValidation("email","email","Please enter a valid email address"); 
+</script>
+
+</div>
+  
+	<script src="jquery.js"></script>
+    <script>
+
+jQuery(document).ready(function() {
+    jQuery('.tabs .tab-links a').on('click', function(e)  {
+        var currentAttrValue = jQuery(this).attr('href');
+ 
+        // Show/Hide Tabs
+        jQuery('.tabs ' + currentAttrValue).show().siblings().hide();
+ 
+        // Change/remove current tab to active
+        jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
+ 
+        e.preventDefault();
+    });
+ });
+ 
+    </script>
+	
+	<SCRIPT LANGUAGE="javascript">
+
+function KeepCount() {
+
+var NewCount = 0
+
+if (document.myemailform.whirlwind.checked)
+{NewCount = NewCount + 1}
+
+if (document.myemailform.blockade.checked)
+{NewCount = NewCount + 1}
+
+if (document.myemailform.charge.checked)
+{NewCount = NewCount + 1}
+
+if (document.myemailform.tosser.checked)
+{NewCount = NewCount + 1}
+
+if (document.myemailform.chivalry.checked)
+{NewCount = NewCount + 1}
+
+if (NewCount == 4)
+{
+document.myemailform; return false;
+}
+} 
+</SCRIPT>
+	
+</body>
+</html>
