@@ -6,12 +6,43 @@
 	<link rel="shortcut icon" href="favicon.jpg"/>
 <title>Character Creation</title>
 <style>
-  h1 {font-family:calibri;}
-  h1{font-size:200%;}
-  h1 {color:cyan;}
-  a {color:cyan;}
-  p {color:cyan;}
-  table {color:cyan;}
+
+#header {
+    color:cyan;
+    text-align:center;
+    padding:5px;
+}
+
+#wrap {
+	height:300px;
+	width:500px;
+	margin:0 auto;
+}
+	
+#nav {
+	color:cyan;
+    height:300px;
+    width:250px;
+    text-align:left;
+    padding:5px;
+    text-overflow: ellipsis;
+	float:left
+
+}
+#section {
+	color:cyan;
+	height:300px;
+    width:250px;
+    text-align:left;
+    padding:5px;
+	float:right
+}
+#footer {
+    color:cyan;
+    clear:both;
+    text-align:center;
+    padding:5px;	 	 
+}
   html {
 	background: url("Background.jpg") no-repeat center center fixed;
 	background-size: 100% 100%;
@@ -26,7 +57,7 @@ div.transbox
   margin: 30px;
   background-color:rgba(0,0,0,.4);
   border: 1px solid black;
-  filter:alpha(opacity=60); /* For IE8 and earlier */
+  filter:alpha(opacity=40); /* For IE8 and earlier */
 }
 div.transbox p
 {
@@ -34,39 +65,65 @@ div.transbox p
   font-weight: bold;
   color: #00ffff;
 }
-<script language="JavaScript" src="scripts/gen_validatorv31.js" type="text/javascript"></script>
 </style>
 </head>
 
+<div id="header">
 <div class="background">
 <div class="transbox">
 
 <h1><center>Who are you?</h1>
 
+</div>
+</div>
+
+<div id="wrap">
+
+<div id="nav">
+<div class="background">
+<div class="transbox">
 <form method="post" name="myemailform" action="form-to-email.php" action="C:\Users\Daneler Hostcrexcum\Desktop\Games\D&D\Character Stats Website\cvee_stats\create character\confirmation.html">
 	<p>
 		<label for='name'>Enter Name: </label><br>
 		<input type="text" name="name">
 	</p>
+	<p><input type="radio" name="sex" value="male">Male</p>
+	<p><input type="radio" name="sex" value="female">Female</p>
+	
+	<p><input type="radio" name="race" value="dwarf" checked>Dwarf</p>
+	<p><input type="radio" name="variant" value="hill" checked>Hill Dwarf</p>
+	<p><input type="radio" name="class" value="warrior" checked>Warrior</p>
+</div>
+</div>
+
+<div id="section">
+<div class="background">
+<div class="transbox">
 	<p>
 		<label for='email'>Enter Email Address:</label><br>
 		<input type="text" name="email">
 	</p>
-	<p><input type="radio" name="sex" value="male">Male<INPUT TYPE="checkbox" NAME="whirlwind" onClick="return KeepCount()"> Whirlwind</p>
-	<p><input type="radio" name="sex" value="female">Female<INPUT TYPE="checkbox" NAME="blockade" onClick="return KeepCount()"> Blockade</p>
-	
-	<p><input type="radio" name="race" value="dwarf" checked>Dwarf<INPUT TYPE="checkbox" NAME="charge" onClick="return KeepCount()"> Charge</p>
-	<p><input type="radio" name="variant" value="hill" checked>Hill Dwarf<INPUT TYPE="checkbox" NAME="tosser" onClick="return KeepCount()"> Tosser</p>
-	<p><input type="radio" name="class" value="warrior" checked>Warrior<INPUT TYPE="checkbox" NAME="chivalry" onClick="return KeepCount()"> Chivalry</p>
 	
 	<p><INPUT TYPE="checkbox" NAME="whirlwind" onClick="return KeepCount()"> Whirlwind</p>
 	<p><INPUT TYPE="checkbox" NAME="blockade" onClick="return KeepCount()"> Blockade</p>
 	<p><INPUT TYPE="checkbox" NAME="charge" onClick="return KeepCount()"> Charge</p>
 	<p><INPUT TYPE="checkbox" NAME="tosser" onClick="return KeepCount()"> Tosser</p>
 	<p><INPUT TYPE="checkbox" NAME="chivalry" onClick="return KeepCount()"> Chivalry</p>
+</div>
+</div>
+
+</div>
 	
+<div id="footer">
+<div class="background">
+<div class="transbox">
 	<input type="submit" name='submit' value="submit">
+</div>
+</div>
 </form>
+
+<!--/div-->
+
 <script language="JavaScript">
 // Code for validating the form
 // Visit http://www.javascript-coder.com/html-form/javascript-form-validation.phtml
@@ -76,8 +133,6 @@ frmvalidator.addValidation("name","req","Please provide your name");
 frmvalidator.addValidation("email","req","Please provide your email"); 
 frmvalidator.addValidation("email","email","Please enter a valid email address"); 
 </script>
-
-</div>
   
 	<script src="jquery.js"></script>
     <script>
