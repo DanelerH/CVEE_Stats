@@ -1,0 +1,1 @@
+For use only if the Elf ability is changed to only allow two extra abilities from a single class

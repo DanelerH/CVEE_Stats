@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+<title>Name and Abilities</title>
+<style>
+#header {
+    color:cyan;
+    text-align:center;
+    padding:5px;
+}
+#wrap {
+	height:300px;
+	width:500px;
+	margin:0 auto;
+}
+#nav {
+    line-height:30px;
+    color:cyan;
+    height:300px;
+    width:250;
+    float:left;
+    padding:10px; 
+}
+#section {
+    line-height:30px;
+	color:cyan;
+    width:250px;
+    float:left;
+    padding:10px; 
+}
+#footer {
+    color:cyan;
+    clear:both;
+    text-align:center;
+    padding:5px; 
+}
+html {
+	background: url("Background.jpg") no-repeat center center fixed;
+	background-size: 100% 100%;
+}
+div.transbox
+{
+	position: absolute;
+	left: 35%;
+	height:450px;
+	width:400px;
+    margin: 30px;
+    background-color:rgba(0,0,0,.4);
+    border: 1px solid black;
+    filter:alpha(opacity=40); /* For IE8 and earlier */
+}
+div.transbox p
+{
+    margin: 5%;
+    font-weight: bold;
+    color: #00ffff;
+}
+</style>
+</head>
+
+<body>
+
+<div class="transbox">
+<div id="header">
+<h1>Who are you?</h1>
+</div>
+
+<div id="wrap">
+<div id="nav">
+<form name="myemailform" action="C:\Users\Daneler Hostcrexcum\Desktop\Games\D&D\Character Stats Website\cvee_stats\create character\confirmation.html">
+	<p>
+		<label for='name'>First name: </label><br>
+		<input type="text" name="name">
+	</p>
+	<p><input type="radio" name="sex" value="male">Male</p>
+	<p><input type="radio" name="sex" value="female">Female</p>
+	
+	<p><input type="radio" name="race" value="gnome" checked>Gnome</p>
+	<p><input type="radio" name="variant" value="keen" checked>Keen Gnome</p>
+	<p><input type="radio" name="class" value="lumberjack" checked>Lumberjack</p>
+</div>
+
+<div id="section">
+<p>
+		<label for='email'>Last name:</label><br>
+		<input type="text" name="email">
+	</p>
+	
+	<p><INPUT TYPE="checkbox" NAME="paincake" onClick="return KeepCount()"> Paincake</p>
+	<p><INPUT TYPE="checkbox" NAME="mount" onClick="return KeepCount()"> Mount</p>
+	<p><INPUT TYPE="checkbox" NAME="yodel" onClick="return KeepCount()"> Yodel</p>
+	<p><INPUT TYPE="checkbox" NAME="earthquake" onClick="return KeepCount()"> Earthquake</p>
+	<p><INPUT TYPE="checkbox" NAME="woodlandcompanion" onClick="return KeepCount()"> Woodland Companion</p>
+</div>
+</div>
+
+<div id="footer">
+	<input type="submit" name='submit' value="submit">
+	</form>
+</div>
+</div>
+
+
+<SCRIPT LANGUAGE="javascript">
+
+function KeepCount() {
+
+var NewCount = 0
+
+if (document.myemailform.paincake.checked)
+{NewCount = NewCount + 1}
+
+if (document.myemailform.mount.checked)
+{NewCount = NewCount + 1}
+
+if (document.myemailform.yodel.checked)
+{NewCount = NewCount + 1}
+
+if (document.myemailform.earthquake.checked)
+{NewCount = NewCount + 1}
+
+if (document.myemailform.woodlandcompanion.checked)
+{NewCount = NewCount + 1}
+
+if (NewCount == 4)
+{
+document.myemailform; return false;
+}
+} 
+</SCRIPT>
+</body>
+</html>

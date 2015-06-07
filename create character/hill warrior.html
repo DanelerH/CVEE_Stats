@@ -1,90 +1,75 @@
 <!doctype html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="CCC.css">
-	<link rel="shortcut icon" href="favicon.jpg"/>
-<title>Character Creation</title>
+<title>Name and Abilities</title>
 <style>
-
 #header {
     color:cyan;
     text-align:center;
     padding:5px;
 }
-
 #wrap {
 	height:300px;
 	width:500px;
 	margin:0 auto;
 }
-	
 #nav {
-	color:cyan;
+    line-height:30px;
+    color:cyan;
     height:300px;
-    width:250px;
-    text-align:left;
-    padding:5px;
-    text-overflow: ellipsis;
-	float:left
-
+    width:250;
+    float:left;
+    padding:10px; 
 }
 #section {
+    line-height:30px;
 	color:cyan;
-	height:300px;
     width:250px;
-    text-align:left;
-    padding:5px;
-	float:right
+    float:left;
+    padding:10px; 
 }
 #footer {
     color:cyan;
     clear:both;
     text-align:center;
-    padding:5px;	 	 
+    padding:5px; 
 }
-  html {
-	background: url("Background.jpg") no-repeat center center fixed;
-	background-size: 100% 100%;
-  }
-  div.background
-{
+html {
 	background: url("Background.jpg") no-repeat center center fixed;
 	background-size: 100% 100%;
 }
 div.transbox
 {
-  margin: 30px;
-  background-color:rgba(0,0,0,.4);
-  border: 1px solid black;
-  filter:alpha(opacity=40); /* For IE8 and earlier */
+	position: absolute;
+	left: 35%;
+	height:450px;
+	width:400px;
+    margin: 30px;
+    background-color:rgba(0,0,0,.4);
+    border: 1px solid black;
+    filter:alpha(opacity=40); /* For IE8 and earlier */
 }
 div.transbox p
 {
-  margin: 5%;
-  font-weight: bold;
-  color: #00ffff;
+    margin: 5%;
+    font-weight: bold;
+    color: #00ffff;
 }
 </style>
 </head>
 
-<div id="header">
-<div class="background">
+<body>
+
 <div class="transbox">
-
-<h1><center>Who are you?</h1>
-
-</div>
+<div id="header">
+<h1>Who are you?</h1>
 </div>
 
 <div id="wrap">
-
 <div id="nav">
-<div class="background">
-<div class="transbox">
-<form method="post" name="myemailform" action="form-to-email.php" action="C:\Users\Daneler Hostcrexcum\Desktop\Games\D&D\Character Stats Website\cvee_stats\create character\confirmation.html">
+<form name="myemailform" action="C:\Users\Daneler Hostcrexcum\Desktop\Games\D&D\Character Stats Website\cvee_stats\create character\confirmation.html">
 	<p>
-		<label for='name'>Enter Name: </label><br>
+		<label for='name'>Name: </label><br>
 		<input type="text" name="name">
 	</p>
 	<p><input type="radio" name="sex" value="male">Male</p>
@@ -94,14 +79,11 @@ div.transbox p
 	<p><input type="radio" name="variant" value="hill" checked>Hill Dwarf</p>
 	<p><input type="radio" name="class" value="warrior" checked>Warrior</p>
 </div>
-</div>
 
 <div id="section">
-<div class="background">
-<div class="transbox">
-	<p>
-		<label for='email'>Enter Email Address:</label><br>
-		<input type="text" name="email">
+<p>
+		<label for='cName'>Character name:</label><br>
+		<input type="text" name="cName">
 	</p>
 	
 	<p><INPUT TYPE="checkbox" NAME="whirlwind" onClick="return KeepCount()"> Whirlwind</p>
@@ -112,48 +94,14 @@ div.transbox p
 </div>
 </div>
 
-</div>
-	
 <div id="footer">
-<div class="background">
-<div class="transbox">
 	<input type="submit" name='submit' value="submit">
+	</form>
 </div>
 </div>
-</form>
 
-<!--/div-->
 
-<script language="JavaScript">
-// Code for validating the form
-// Visit http://www.javascript-coder.com/html-form/javascript-form-validation.phtml
-// for details
-var frmvalidator  = new Validator("myemailform");
-frmvalidator.addValidation("name","req","Please provide your name"); 
-frmvalidator.addValidation("email","req","Please provide your email"); 
-frmvalidator.addValidation("email","email","Please enter a valid email address"); 
-</script>
-  
-	<script src="jquery.js"></script>
-    <script>
-
-jQuery(document).ready(function() {
-    jQuery('.tabs .tab-links a').on('click', function(e)  {
-        var currentAttrValue = jQuery(this).attr('href');
- 
-        // Show/Hide Tabs
-        jQuery('.tabs ' + currentAttrValue).show().siblings().hide();
- 
-        // Change/remove current tab to active
-        jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
- 
-        e.preventDefault();
-    });
- });
- 
-    </script>
-	
-	<SCRIPT LANGUAGE="javascript">
+<SCRIPT LANGUAGE="javascript">
 
 function KeepCount() {
 
@@ -180,6 +128,5 @@ document.myemailform; return false;
 }
 } 
 </SCRIPT>
-	
 </body>
 </html>

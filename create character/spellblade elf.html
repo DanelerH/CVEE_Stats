@@ -1,0 +1,256 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Name and Abilities</title>
+		<style>
+			#header
+			{
+				color:cyan;
+				text-align:center;
+				padding:5px;
+			}
+			#wrap
+			{
+				height:300px;
+				width:500px;
+				margin:0 auto;
+			}
+			#nav
+			{
+				line-height:30px;
+				color:cyan;
+				height:300px;
+				width:250;
+				float:left;
+				padding:10px; 
+			}
+			#section
+			{
+				line-height:30px;
+				color:cyan;
+				width:250px;
+				float:left;
+				padding:10px; 
+			}
+			#footer
+			{
+				color:cyan;
+				clear:both;
+				text-align:center;
+				padding:5px; 
+			}
+			html
+			{
+				background: url("Background.jpg") no-repeat center center fixed;
+				background-size: 100% 100%;
+			}
+			div.transbox
+			{
+				position: absolute;
+				left: 35%;
+				height:1100px;
+				width:415px;
+				margin: 30px;
+				background-color:rgba(0,0,0,.4);
+				border: 1px solid black;
+				filter:alpha(opacity=40); /* For IE8 and earlier */
+			}
+			div.transbox p
+			{
+				margin: 5%;
+				font-weight: bold;
+				color: #00ffff;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="transbox">
+			<div id="header">
+				<h1>Who are you?</h1>
+			</div>
+			<div id="wrap">
+				<div id="nav">
+					<form name="myemailform" action="C:\Users\Daneler Hostcrexcum\Desktop\Games\D&D\Character Stats Website\cvee_stats\create character\confirmation.html">
+						<p>
+							<label for='name'>Name: </label><br>
+							<input type="text" name="name">
+						</p>
+						<p><input type="radio" name="sex" value="male">Male</p>
+						<p><input type="radio" name="sex" value="female">Female</p>
+						<p><input type="radio" name="race" value="elf" checked>Elf</p>
+						<p><input type="radio" name="variant" value="spellblade" checked>Spellblade</p>
+						<p><input type="radio" name="class" value="sorcerer" checked>Sorcerer</p>
+				</div>
+				<div id="section">
+						<p>
+							<label for='cName'>Character name:</label><br>
+							<input type="text" name="cName">
+						</p>
+						<p><INPUT TYPE="checkbox" NAME="rayoffrost" onClick="return KeepCount()"> Ray of Frost</p>
+						<p><INPUT TYPE="checkbox" NAME="blink" onClick="return KeepCount()"> Blink</p>
+						<p><INPUT TYPE="checkbox" NAME="enlarge" onClick="return KeepCount()"> Enlarge</p>
+						<p><INPUT TYPE="checkbox" NAME="flare" onClick="return KeepCount()"> Flare</p>
+						<p><INPUT TYPE="checkbox" NAME="rollingfog" onClick="return KeepCount()"> Rolling Fog</p>
+				</div>
+			</div><br><br>
+			<div id="wrap">
+				<div id="nav">
+					<p><INPUT TYPE="checkbox" NAME="honorchains" onClick="return KeepCount2()"> Honor Chains</p>
+					<p><INPUT TYPE="checkbox" NAME="blessingofstrength" onClick="return KeepCount2()"> Blessing of Strength</p>
+					<p><INPUT TYPE="checkbox" NAME="divineintervention" onClick="return KeepCount2()"> Divine Intervention</p>
+					<p><INPUT TYPE="checkbox" NAME="holylight" onClick="return KeepCount2()"> Holy Light</p>
+					<p><INPUT TYPE="checkbox" NAME="disguise" onClick="return KeepCount2()"> Disguise</p>
+					<p><INPUT TYPE="checkbox" NAME="yodel" onClick="return KeepCount2()"> Yodel</p>
+					<p><INPUT TYPE="checkbox" NAME="earthquake" onClick="return KeepCount2()"> Earthquake</p>
+					<!--p><INPUT TYPE="checkbox" NAME="rayoffrost" onClick="return KeepCount2()"> Ray of Frost</p>
+					<p><INPUT TYPE="checkbox" NAME="blink" onClick="return KeepCount2()"> Blink</p>
+					<p><INPUT TYPE="checkbox" NAME="enlarge" onClick="return KeepCount2()"> Enlarge</p>
+					<p><INPUT TYPE="checkbox" NAME="flare" onClick="return KeepCount2()"> Flare</p>
+					<p><INPUT TYPE="checkbox" NAME="rollingfog" onClick="return KeepCount2()"> Rolling Fog</p-->
+					<p><INPUT TYPE="checkbox" NAME="callearthlord" onClick="return KeepCount2()"> Call Earthlord</p>
+					<p><INPUT TYPE="checkbox" NAME="icebolt" onClick="return KeepCount2()"> Ice Bolt</p>
+					<p><INPUT TYPE="checkbox" NAME="summonairsprites" onClick="return KeepCount2()"> Summon Air Sprites</p>
+					<p><INPUT TYPE="checkbox" NAME="summonfrostelemental" onClick="return KeepCount2()"> Summon Frost Elemental</p>
+				</div>
+				<div id="section">
+					<p><INPUT TYPE="checkbox" NAME="windblast" onClick="return KeepCount2()"> Wind Blast</p>
+					<p><INPUT TYPE="checkbox" NAME="arcanebeam" onClick="return KeepCount2()"> Arcane Beam</p>
+					<p><INPUT TYPE="checkbox" NAME="arcanemissile" onClick="return KeepCount2()"> Arcane Missile</p>
+					<p><INPUT TYPE="checkbox" NAME="blizzard" onClick="return KeepCount2()"> Blizzard</p>
+					<p><INPUT TYPE="checkbox" NAME="fireball" onClick="return KeepCount2()"> Fireball</p>
+					<p><INPUT TYPE="checkbox" NAME="iceblast" onClick="return KeepCount2()"> Ice Blast</p>
+					<p><INPUT TYPE="checkbox" NAME="blanketofdarkness" onClick="return KeepCount2()"> Blanket of Darkness</p>
+					<p><INPUT TYPE="checkbox" NAME="grandravensclaw" onClick="return KeepCount2()"> Grand Raven's Claw</p>
+					<p><INPUT TYPE="checkbox" NAME="lifedrain" onClick="return KeepCount2()"> Lifedrain</p>
+					<p><INPUT TYPE="checkbox" NAME="nearsight" onClick="return KeepCount2()"> Nearsight</p>
+					<p><INPUT TYPE="checkbox" NAME="pestilence" onClick="return KeepCount2()"> Pestilence</p>
+				</div>
+			</div><br>
+			<div id="footer"><br><br>
+					<input type="submit" name='submit' value="submit">
+				</form>
+			</div>
+		</div>
+		<SCRIPT LANGUAGE="javascript">
+
+			function KeepCount()
+			{
+				var NewCount = 0
+
+				if (document.myemailform.rayoffrost.checked)
+				{NewCount = NewCount + 1}
+
+				if (document.myemailform.blink.checked)
+				{NewCount = NewCount + 1}
+
+				if (document.myemailform.enlarge.checked)
+				{NewCount = NewCount + 1}
+
+				if (document.myemailform.flare.checked)
+				{NewCount = NewCount + 1}
+
+				if (document.myemailform.rollingfog.checked)
+				{NewCount = NewCount + 1}
+
+				if (NewCount == 4)
+				{
+					document.myemailform; return false;
+				}
+			} 
+		</SCRIPT>
+
+		<SCRIPT LANGUAGE="javascript">
+
+			function KeepCount2()
+			{
+				var NewCount2 = 0
+
+				if (document.myemailform.honorchains.checked)
+				{NewCount2 = NewCount2 + 1}
+
+				if (document.myemailform.blessingofstrength.checked)
+				{NewCount2 = NewCount2 + 1}
+
+				if (document.myemailform.divineintervention.checked)
+				{NewCount2 = NewCount2 + 1}
+
+				if (document.myemailform.holylight.checked)
+				{NewCount2 = NewCount2 + 1}
+
+				if (document.myemailform.disguise.checked)
+				{NewCount2 = NewCount2 + 1}
+
+				if (document.myemailform.yodel.checked)
+				{NewCount2 = NewCount2 + 1}
+
+				if (document.myemailform.earthquake.checked)
+				{NewCount2 = NewCount2 + 1}
+/*
+				if (document.myemailform.rayoffrost.checked)
+				{NewCount2 = NewCount2 + 1}
+
+				if (document.myemailform.blink.checked)
+				{NewCount2 = NewCount2 + 1}
+
+				if (document.myemailform.enlarge.checked)
+				{NewCount2 = NewCount2 + 1}
+
+				if (document.myemailform.flare.checked)
+				{NewCount2 = NewCount2 + 1}
+
+				if (document.myemailform.rollingfog.checked)
+				{NewCount2 = NewCount2 + 1}
+*/
+				if (document.myemailform.callearthlord.checked)
+				{NewCount2 = NewCount2 + 1}
+
+				if (document.myemailform.icebolt.checked)
+				{NewCount2 = NewCount2 + 1}
+
+				if (document.myemailform.summonairsprites.checked)
+				{NewCount2 = NewCount2 + 1}
+
+				if (document.myemailform.summonfrostelemental.checked)
+				{NewCount2 = NewCount2 + 1}
+
+				if (document.myemailform.windblast.checked)
+				{NewCount2 = NewCount2 + 1}
+
+				if (document.myemailform.arcanebeam.checked)
+				{NewCount2 = NewCount2 + 1}
+
+				if (document.myemailform.arcanemissile.checked)
+				{NewCount2 = NewCount2 + 1}
+
+				if (document.myemailform.blizzard.checked)
+				{NewCount2 = NewCount2 + 1}
+
+				if (document.myemailform.fireball.checked)
+				{NewCount2 = NewCount2 + 1}
+
+				if (document.myemailform.iceblast.checked)
+				{NewCount2 = NewCount2 + 1}
+
+				if (document.myemailform.blanketofdarkness.checked)
+				{NewCount2 = NewCount2 + 1}
+
+				if (document.myemailform.grandravensclaw.checked)
+				{NewCount2 = NewCount2 + 1}
+
+				if (document.myemailform.lifedrain.checked)
+				{NewCount2 = NewCount2 + 1}
+
+				if (document.myemailform.nearsight.checked)
+				{NewCount2 = NewCount2 + 1}
+
+				if (document.myemailform.pestilence.checked)
+				{NewCount2 = NewCount2 + 1}
+
+				if (NewCount2 == 3)
+				{
+					document.myemailform; return false;
+				}
+			} 
+		</SCRIPT>
+	</body>
+</html>

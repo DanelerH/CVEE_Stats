@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="elves.css">
+<title>Name and Abilities</title>
+<style>
+html {
+	background: url("Background.jpg") no-repeat center center fixed;
+	background-size: 100% 100%;
+}
+div.transbox
+{
+	position: absolute;
+	left: 25%;
+    margin: 30px;
+    background-color:rgba(0,0,0,.4);
+    border: 1px solid black;
+    filter:alpha(opacity=40); /* For IE8 and earlier */
+}
+div.transbox p
+{
+    margin: 5%;
+    font-weight: bold;
+    color: #00ffff;
+}
+</style>
+</head>
+<body>
+<div class="transbox">
+<div id="container">
+        <div id="header">
+        <p>Who are you?</p>
+    </div>
+    
+    <div id="primary">
+        <form name="myemailform" action="C:\Users\Daneler Hostcrexcum\Desktop\Games\D&D\Character Stats Website\cvee_stats\create character\confirmation.html">
+	<p>
+		<label for='name'>First name: </label><br>
+		<input type="text" name="name">
+	</p>
+	<p><input type="radio" name="sex" value="male">Male</p>
+	<p><input type="radio" name="sex" value="female">Female</p>
+	
+	<p><input type="radio" name="race" value="elf" checked>Elf</p>
+	<p><input type="radio" name="variant" value="noble born" checked>Noble Born</p>
+	<p><input type="radio" name="class" value="warrior" checked>Warrior</p>
+	<p><input type="radio" name="secondary" value="cabalist" checked>Cabalist</p>
+    </div>
+    
+    <div id="content">
+        <p>
+		<label for='email'>Last name:</label><br>
+		<input type="text" name="email">
+	</p>
+	
+	<p><INPUT TYPE="checkbox" NAME="whirlwind" onClick="return KeepCount()"> Whirlwind</p>
+	<p><INPUT TYPE="checkbox" NAME="blockade" onClick="return KeepCount()"> Blockade</p>
+	<p><INPUT TYPE="checkbox" NAME="charge" onClick="return KeepCount()"> Charge</p>
+	<p><INPUT TYPE="checkbox" NAME="tosser" onClick="return KeepCount()"> Tosser</p>
+	<p><INPUT TYPE="checkbox" NAME="chivalry" onClick="return KeepCount()"> Chivalry</p>
+    </div>
+    
+    <div id="secondary">
+        <p>
+		<label for='name'>Age: </label><br>
+		<input type="text" name="age">
+	</p>
+	
+	<p><INPUT TYPE="checkbox" NAME="blanketofdarkness" onClick="return KeepCount2()"> Blanket of Darkness</p>
+	<p><INPUT TYPE="checkbox" NAME="grandravensclaw" onClick="return KeepCount2()"> Grand Raven's Claw</p>
+	<p><INPUT TYPE="checkbox" NAME="lifedrain" onClick="return KeepCount2()"> Lifedrain</p>
+	<p><INPUT TYPE="checkbox" NAME="nearsight" onClick="return KeepCount2()"> Nearsight</p>
+	<p><INPUT TYPE="checkbox" NAME="pestilence" onClick="return KeepCount2()"> Pestilence</p>
+    </div>
+    
+    <div id="footer">
+        <p><center><input type="submit" name='submit' value="submit">
+	</form></p>
+    </div>
+</div>
+</div>
+
+<SCRIPT LANGUAGE="javascript">
+
+function KeepCount() {
+
+var NewCount = 0
+
+if (document.myemailform.whirlwind.checked)
+{NewCount = NewCount + 1}
+
+if (document.myemailform.blockade.checked)
+{NewCount = NewCount + 1}
+
+if (document.myemailform.charge.checked)
+{NewCount = NewCount + 1}
+
+if (document.myemailform.tosser.checked)
+{NewCount = NewCount + 1}
+
+if (document.myemailform.chivalry.checked)
+{NewCount = NewCount + 1}
+
+if (NewCount == 4)
+{
+document.myemailform; return false;
+}
+}
+</SCRIPT>
+
+<SCRIPT LANGUAGE="javascript">
+
+function KeepCount2() {
+
+var NewCount2 = 0
+
+if (document.myemailform.blanketofdarkness.checked)
+{NewCount2 = NewCount2 + 1}
+
+if (document.myemailform.grandravensclaw.checked)
+{NewCount2 = NewCount2 + 1}
+
+if (document.myemailform.lifedrain.checked)
+{NewCount2 = NewCount2 + 1}
+
+if (document.myemailform.nearsight.checked)
+{NewCount2 = NewCount2 + 1}
+
+if (document.myemailform.pestilence.checked)
+{NewCount2 = NewCount2 + 1}
+
+if (NewCount2 == 3)
+{
+document.myemailform; return false;
+}
+} 
+</SCRIPT>
+</body>
+</html>

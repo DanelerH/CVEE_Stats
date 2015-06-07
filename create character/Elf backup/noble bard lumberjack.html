@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+<head>
+<title>Name and Abilities</title>
+<style>
+#header {
+    color:cyan;
+    text-align:center;
+    padding:5px;
+}
+#wrap {
+	height:300px;
+	width:750px;
+	margin:0 auto;
+}
+#nav {
+    line-height:30px;
+    color:cyan;
+    height:300px;
+    width:250;
+    float:left;
+    padding:10px; 
+}
+#section {
+    line-height:30px;
+	color:cyan;
+    width:175px;
+    float:left;
+    padding:10px; 
+}
+#col3 {
+    line-height:30px;
+	color:cyan;
+    width:250px;
+    float:left;
+    padding:10px;
+}
+#footer {
+    color:cyan;
+    clear:both;
+    text-align:center;
+    padding:5px; 
+}
+html {
+	background: url("Background.jpg") no-repeat center center fixed;
+	background-size: 100% 100%;
+}
+div.transbox
+{
+	position: absolute;
+	left: 25%;
+	height:450px;
+	width:700px;
+    margin: 30px;
+    background-color:rgba(0,0,0,.4);
+    border: 1px solid black;
+    filter:alpha(opacity=40); /* For IE8 and earlier */
+}
+div.transbox p
+{
+    margin: 5%;
+    font-weight: bold;
+    color: #00ffff;
+}
+</style>
+</head>
+
+<body>
+
+<div class="transbox">
+<div id="header">
+<h1>Who are you?</h1>
+</div>
+
+<div id="wrap">
+<div id="nav">
+<form name="myemailform" action="C:\Users\Daneler Hostcrexcum\Desktop\Games\D&D\Character Stats Website\cvee_stats\create character\confirmation.html">
+	<p>
+		<label for='name'>Name: </label><br>
+		<input type="text" name="name">
+	</p>
+	<p><input type="radio" name="sex" value="male">Male</p>
+	<p><input type="radio" name="sex" value="female">Female</p>
+	
+	<p><input type="radio" name="race" value="elf" checked>Elf</p>
+	<p><input type="radio" name="variant" value="noble born" checked>Noble Born</p>
+	<p><input type="radio" name="class" value="bard" checked>Bard</p>
+	<p><input type="radio" name="secondary" value="lumberjack" checked>Lumberjack</p>
+</div>
+
+<div id="section">
+<p>
+		<label for='fName'>Character first name:</label><br>
+		<input type="text" name="fName">
+	</p>
+	
+	<p><INPUT TYPE="checkbox" NAME="borrow" onClick="return KeepCount()"> Borrow</p>
+	<p><INPUT TYPE="checkbox" NAME="charm" onClick="return KeepCount()"> Charm</p>
+	<p><INPUT TYPE="checkbox" NAME="doubledown" onClick="return KeepCount()"> Double Down</p>
+	<p><INPUT TYPE="checkbox" NAME="lullaby" onClick="return KeepCount()"> Lullaby</p>
+	<p><INPUT TYPE="checkbox" NAME="disguise" onClick="return KeepCount()"> Disguise</p>
+</div>
+
+<div id="col3">
+	<p>
+		<label for='lName'>Character last name:</label><br>
+		<input type="text" name="lName">
+	</p>
+	<p><INPUT TYPE="checkbox" NAME="yodel" onClick="return KeepCount2()"> Yodel</p>
+	<p><INPUT TYPE="checkbox" NAME="earthquake" onClick="return KeepCount2()"> Earthquake</p>
+</div>
+</div>
+
+<div id="footer">
+	<input type="submit" name='submit' value="submit">
+	</form>
+</div>
+</div>
+
+
+<SCRIPT LANGUAGE="javascript">
+
+function KeepCount() {
+
+var NewCount = 0
+
+if (document.myemailform.borrow.checked)
+{NewCount = NewCount + 1}
+
+if (document.myemailform.charm.checked)
+{NewCount = NewCount + 1}
+
+if (document.myemailform.doubledown.checked)
+{NewCount = NewCount + 1}
+
+if (document.myemailform.lullaby.checked)
+{NewCount = NewCount + 1}
+
+if (document.myemailform.disguise.checked)
+{NewCount = NewCount + 1}
+
+if (NewCount == 4)
+{
+document.myemailform; return false;
+}
+}
+</SCRIPT>
+
+<SCRIPT LANGUAGE="javascript">
+
+function KeepCount2() {
+
+var NewCount2 = 0
+
+if (document.myemailform.yodel.checked)
+{NewCount2 = NewCount2 + 1}
+
+if (document.myemailform.earthquake.checked)
+{NewCount2 = NewCount2 + 1}
+
+if (NewCount2 == 3)
+{
+document.myemailform; return false;
+}
+} 
+</SCRIPT>
+</body>
+</html>
