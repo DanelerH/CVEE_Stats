@@ -1,7 +1,8 @@
-<?php 
+<?php
+
 if(isset($_POST['submit'])){
-    $to = "myemail@example.com";
-    $from = "myemail@example.com";
+    $to = "danelerhostcrexcum@gmail.com";
+    $from = "danelerhostcrexcum@gmail.com";
     $name = $_POST['name'];
     $character_name = $_POST['cName'];
     $subject = "New Character";
