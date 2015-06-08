@@ -1,14 +1,12 @@
-div.transbox
-{
-    margin: 30px;
+div.transbox {
+	margin:30px;
 	background-color:rgba(0,0,0,.4);
-	border: 1px solid black;
-	filter:alpha(opacity=40);
+	border:1px solid #000;
+	filter:alpha(opacity=40)
 }
 
-div.transbox p
-{
-	margin: 5%;
-	font-weight: bold;
-	color: #00ffff;
+div.transbox p {
+	margin:5%;
+	font-weight:700;
+	color:#0ff
 }
