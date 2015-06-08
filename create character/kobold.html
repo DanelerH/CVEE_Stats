@@ -1,72 +1,38 @@
 <!doctype html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="CCC.css">
-	<link rel="shortcut icon" href="favicon.jpg"/>
-<title>Kobold</title>
-<style>
-  h1 {font-family:calibri;}
-  h1{font-size:200%;}
-  h1 {color:cyan;}
-  a {color:cyan;}
-  p {color:cyan;}
-  table {color:cyan;}
-  html {
-	background: url("Background.jpg") no-repeat center center fixed;
-	background-size: 100% 100%;
-  }
-  div.background
-{
-	background: url("Background.jpg") no-repeat center center fixed;
-	background-size: 100% 100%;
-}
-div.transbox
-{
-  margin: 30px;
-  background-color:rgba(0,0,0,.4);
-  border: 1px solid black;
-  filter:alpha(opacity=60); /* For IE8 and earlier */
-}
-div.transbox p
-{
-  margin: 5%;
-  font-weight: bold;
-  color: #00ffff;
-}
-</style>
-</head>
-
-<div class="background">
-<div class="transbox">
-
-<h1><center>What type of Kobold would you like to be?</h1>
-
-<form action="http://danelerh.github.io/campaigns/create%20character/triton.html">
-    <p><center><center><input type="submit" value="Triton Ground">
-</form>
-<br><br>
-<p align="right"><a href="index.html">Home</a></p>
-
-</div>
-  
-	<script src="jquery.js"></script>
-    <script>
-
-jQuery(document).ready(function() {
-    jQuery('.tabs .tab-links a').on('click', function(e)  {
-        var currentAttrValue = jQuery(this).attr('href');
- 
-        // Show/Hide Tabs
-        jQuery('.tabs ' + currentAttrValue).show().siblings().hide();
- 
-        // Change/remove current tab to active
-        jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
- 
-        e.preventDefault();
-    });
- });
- 
-    </script>
-</body>
+	<head>
+		<title>Kobold</title>
+		<style>
+			h1 {font-family:calibri;}
+			h1{font-size:200%;}
+			h1 {color:cyan;}
+			html
+			{
+				background: url("Background.jpg") no-repeat center center fixed;
+				background-size: 100% 100%;
+			}
+			div.transbox
+			{
+				margin: 30px;
+				background-color:rgba(0,0,0,.4);
+				border: 1px solid black;
+				filter:alpha(opacity=40);
+			}
+			div.transbox p
+			{
+				margin: 5%;
+				font-weight: bold;
+				color: #00ffff;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="transbox">
+			<h1><center>What type of Kobold would you like to be?</h1>
+			<p><center><form action="http://danelerh.github.io/campaigns/create%20character/triton.html">
+				<input type="submit" value="Triton Ground">
+			</form></p>
+			<p align="right"><a href="http://danelerh.github.io/campaigns/">Home</a></p>
+		</div>
+	</body>
 </html>
