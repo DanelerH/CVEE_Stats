@@ -1,0 +1,31 @@
+#header {
+    color:cyan;
+    text-align:center;
+    padding:5px;
+}
+#wrap {
+	height:300px;
+	width:500px;
+	margin:0 auto;
+}
+#col1 {
+    line-height:30px;
+    color:cyan;
+    height:300px;
+    width:250;
+    float:left;
+    padding:10px; 
+}
+#col2 {
+    line-height:30px;
+	color:cyan;
+    width:250px;
+    float:left;
+    padding:10px; 
+}
+#footer {
+    color:cyan;
+    clear:both;
+    text-align:center;
+    padding:5px; 
+}

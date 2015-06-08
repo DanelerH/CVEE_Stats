@@ -2,45 +2,10 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="transbox.css">
+		<link rel="stylesheet" type="text/css" href="2column.css">
 		<link rel="shortcut icon" href="favicon.png"/>
 		<title>Name and Abilities</title>
 		<style>
-			#header
-			{
-				color:cyan;
-				text-align:center;
-				padding:5px;
-			}
-			#wrap
-			{
-				height:300px;
-				width:500px;
-				margin:0 auto;
-			}
-			#nav
-			{
-				line-height:30px;
-				color:cyan;
-				height:300px;
-				width:250;
-				float:left;
-				padding:10px; 
-			}
-			#section
-			{
-				line-height:30px;
-				color:cyan;
-				width:250px;
-				float:left;
-				padding:10px; 
-			}
-			#footer
-			{
-				color:cyan;
-				clear:both;
-				text-align:center;
-				padding:5px; 
-			}
 			html
 			{
 				background: url("Background.jpg") no-repeat center center fixed;
@@ -54,7 +19,7 @@
 				<h1>Who are you?</h1>
 			</div>
 			<div id="wrap">
-				<div id="nav">
+				<div id="col1">
 					<form name="myemailform" action="http://danelerh.github.io/campaigns/create%20character/confirmation.html">
 						<p>
 							<label for='name'>Name: </label><br>
@@ -66,7 +31,7 @@
 						<p><input type="radio" name="variant" value="spellblade" checked>Spellblade</p>
 						<p><input type="radio" name="class" value="lumberjack" checked>Lumberjack</p>
 				</div>
-				<div id="section">
+				<div id="col2">
 						<p>
 							<label for='cName'>Character name:</label><br>
 							<input type="text" name="cName">
@@ -80,7 +45,7 @@
 				</div>
 			</div><br><br>
 			<div id="wrap">
-				<div id="nav">
+				<div id="col1">
 					<p><INPUT TYPE="checkbox" NAME="honorchains" onClick="return KeepCount2()"> Honor Chains</p>
 					<p><INPUT TYPE="checkbox" NAME="blessingofstrength" onClick="return KeepCount2()"> Blessing of Strength</p>
 					<p><INPUT TYPE="checkbox" NAME="divineintervention" onClick="return KeepCount2()"> Divine Intervention</p>
@@ -95,7 +60,7 @@
 					<p><INPUT TYPE="checkbox" NAME="icebolt" onClick="return KeepCount2()"> Ice Bolt</p>
 					<p><INPUT TYPE="checkbox" NAME="summonairsprites" onClick="return KeepCount2()"> Summon Air Sprites</p>
 				</div>
-				<div id="section">
+				<div id="col2">
 					<p><INPUT TYPE="checkbox" NAME="summonfrostelemental" onClick="return KeepCount2()"> Summon Frost Elemental</p>
 					<p><INPUT TYPE="checkbox" NAME="windblast" onClick="return KeepCount2()"> Wind Blast</p>
 					<p><INPUT TYPE="checkbox" NAME="arcanebeam" onClick="return KeepCount2()"> Arcane Beam</p>
