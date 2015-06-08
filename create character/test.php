@@ -1,15 +1,26 @@
 <?php
+require("class.PHPMailer.php");
 
-if(isset($_POST['submit'])){
-    $to = "danelerhostcrexcum@gmail.com";
-    $from = "danelerhostcrexcum@gmail.com";
-    $name = $_POST['name'];
-    $character_name = $_POST['cName'];
-    $subject = "New Character";
-    $message = $_POST['message'];
+$mail = new PHPMailer();
 
-    $headers = "From:" . $from;
-    $headers2 = "From:" . $to;
-    mail($to,$subject,$message,$headers);
-    }
+$mail->IsSMTP();
+$mail->Host = "smtp.gmail.com";
+
+$mail->From = "danelerhostcrexcum@gmail.com";
+$mail->AddAddress("danelerhostcrexcum@gmail.com");
+
+$mail->IsHTML(true);
+
+$mail->Subject = "Here is the subject";
+$mail->Body    = "This is the HTML message body <b>in bold!</b>";
+$mail->AltBody = "This is the body in plain text for non-HTML mail clients";
+
+if(!$mail->Send())
+{
+   echo "Message could not be sent. <p>";
+   echo "Mailer Error: " . $mail->ErrorInfo;
+   exit;
+}
+
+echo "Message has been sent";
 ?>
