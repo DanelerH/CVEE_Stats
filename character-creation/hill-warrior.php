@@ -30,16 +30,116 @@ Abilities:		'.if ($_POST['whirlwind'] == 'value1').'
     $mail->Password   = "Daneler4"; // Your Gmail password
       
     // Compose
-    $mail->SetFrom($_POST["danelerhostcrexcum@gmail.com]);
-    $mail->AddReplyTo($_POST["danelerhostcrexcum@gmail]);
+    $mail->SetFrom($_POST["danelerhostcrexcum@gmail.com"]);
     $mail->Subject = "New Character";      // Subject (which isn't required)  
     $mail->MsgHTML($message);
  
-    // Send To  
-    $mail->AddAddress("recipientemail@gmail.com", "Recipient Name"); // Where to send it - Recipient
+    // Send To
+    $mail->AddAddress("danelerhostcrexcum@gmail.com"); // Where to send it - Recipient
     $result = $mail->Send();		// Send!  
 	$message = $result ? 'Successfully Sent!' : 'Sending Failed!';      
 	unset($mail);
 
 }
 ?>
+
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="transbox.css">
+		<link rel="stylesheet" type="text/css" href="2column.css">
+		<link rel="shortcut icon" href="favicon.png"/>
+		<title>Name and Abilities</title>
+		<style>
+			html
+			{
+				background: url("Background.jpg") no-repeat center center fixed;
+				background-size: 100% 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="transbox">
+			<div id="header">
+				<h1>Who are you?</h1>
+			</div>
+			<div id="wrap">
+				<div id="col1">
+					<form name="myemailform" action="" method="post">
+						<p>
+							<label for='name'>Name: </label><br>
+							<input type="text" name="name">
+						</p>
+						<p><input type="radio" name="sex" value="male">Male</p>
+						<p><input type="radio" name="sex" value="female">Female</p>
+						<p><input type="radio" name="race" value="dwarf" checked>Dwarf</p>
+						<p><input type="radio" name="variant" value="hill" checked>Hill Dwarf</p>
+						<p><input type="radio" name="class" value="warrior" checked>Warrior</p>
+				</div>
+				<div id="col2">
+						<p>
+							<label for='cName'>Character name:</label><br>
+							<input type="text" name="cName">
+						</p>
+						<p><INPUT TYPE="checkbox" NAME="whirlwind" onClick="return KeepCount()"> Whirlwind</p>
+						<p><INPUT TYPE="checkbox" NAME="blockade" onClick="return KeepCount()"> Blockade</p>
+						<p><INPUT TYPE="checkbox" NAME="charge" onClick="return KeepCount()"> Charge</p>
+						<p><INPUT TYPE="checkbox" NAME="tosser" onClick="return KeepCount()"> Tosser</p>
+						<p><INPUT TYPE="checkbox" NAME="chivalry" onClick="return KeepCount()"> Chivalry</p>
+				</div>
+			</div>
+			<div id="footer">
+						<input type="submit" name='submit' value="submit">
+					</form>
+					<p><?php if(!empty($message)) echo $message; ?></p>
+			</div>
+		</div>
+		<SCRIPT LANGUAGE="javascript">
+			function KeepCount()
+			{
+				var NewCount = 0
+				if (document.myemailform.whirlwind.checked)
+				{NewCount = NewCount + 1}
+				if (document.myemailform.blockade.checked)
+				{NewCount = NewCount + 1}
+				if (document.myemailform.charge.checked)
+				{NewCount = NewCount + 1}
+				if (document.myemailform.tosser.checked)
+				{NewCount = NewCount + 1}
+				if (document.myemailform.chivalry.checked)
+				{NewCount = NewCount + 1}
+				if (NewCount == 4)
+				{document.myemailform; return false;}
+			} 
+		</SCRIPT>
+	</body>
+</html>
+
+
+<html>
+<head>
+  <title>Contact Form</title>
+</head>
+<body>
+					
+		<div style="margin: 100px auto 0;width: 300px;">
+			<h3>Contact Form</h3>
+			<form name="form1" id="form1" action="" method="post">
+					<fieldset>
+					  <input type="text" name="fullname" placeholder="Full Name" />
+					  <br />
+					  <input type="text" name="subject" placeholder="Subject" />
+					  <br />
+					  <input type="text" name="phone" placeholder="Phone" />
+					  <br />
+					  <input type="text" name="emailid" placeholder="Email" />
+					  <br />
+					  <textarea rows="4" cols="20" name="comments" placeholder="Comments"></textarea>
+					  <br />
+					  <input type="submit" name="submit" value="Send" />
+					</fieldset>
+			</form>
+			<p><?php if(!empty($message)) echo $message; ?></p>
+		</div>
+					
+</body>
+</html>
