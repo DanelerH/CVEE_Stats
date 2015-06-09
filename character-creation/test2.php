@@ -5,7 +5,14 @@ require("class.phpmailer.php");
 $mail = new PHPMailer();
 
 $mail->IsSMTP();
-$mail->Host     = "smtp.gmail.com";
+$mail->SMTPAuth = true;
+$mail->SMTPSecure = "ssl";
+$mail->Host = "smtp.gmail.com";
+$mail->Port = 465;
+$mail->Encoding = '7bit';
+
+$mail->Username = "danelerhoscrexcum@gmail";
+$mail->Password = "Daneler4";
 
 $mail->From     = "danelerhostcrexcum@gmail.com";
 $mail->AddAddress("danelerhoscrexcum@gmail.com");
