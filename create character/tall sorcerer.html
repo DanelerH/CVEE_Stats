@@ -1,87 +1,70 @@
 <!doctype html>
 <html>
-<head>
+	<head>
 		<link rel="stylesheet" type="text/css" href="transbox.css">
 		<link rel="stylesheet" type="text/css" href="2column.css">
 		<link rel="shortcut icon" href="favicon.png"/>
-<title>Name and Abilities</title>
-<style>
-html {
-	background: url("Background.jpg") no-repeat center center fixed;
-	background-size: 100% 100%;
-}
-</style>
-</head>
-
-<body>
-
-<div class="transbox">
-<div id="header">
-<h1>Who are you?</h1>
-</div>
-
-<div id="wrap">
-<div id="col1">
-<form name="myemailform" action="http://danelerh.github.io/campaigns/create%20character/confirmation.html">
-	<p>
-		<label for='name'>Name: </label><br>
-		<input type="text" name="name">
-	</p>
-	<p><input type="radio" name="sex" value="male">Male</p>
-	<p><input type="radio" name="sex" value="female">Female</p>
-	
-	<p><input type="radio" name="race" value="dwarf" checked>Dwarf</p>
-	<p><input type="radio" name="variant" value="tall" checked>Tall Dwarf</p>
-	<p><input type="radio" name="class" value="sorcerer" checked>Sorcerer</p>
-</div>
-
-<div id="col2">
-<p>
-		<label for='cName'>Character name:</label><br>
-		<input type="text" name="cName">
-	</p>
-	
-	<p><INPUT TYPE="checkbox" NAME="rayoffrost" onClick="return KeepCount()"> Ray of Frost</p>
-	<p><INPUT TYPE="checkbox" NAME="blink" onClick="return KeepCount()"> Blink</p>
-	<p><INPUT TYPE="checkbox" NAME="enlarge" onClick="return KeepCount()"> Enlarge</p>
-	<p><INPUT TYPE="checkbox" NAME="flare" onClick="return KeepCount()"> Flare</p>
-	<p><INPUT TYPE="checkbox" NAME="rollingfog" onClick="return KeepCount()"> Rolling Fog</p>
-</div>
-</div>
-
-<div id="footer">
-	<input type="submit" name='submit' value="submit">
-	</form>
-</div>
-</div>
-
-
-<SCRIPT LANGUAGE="javascript">
-
-function KeepCount() {
-
-var NewCount = 0
-
-if (document.myemailform.rayoffrost.checked)
-{NewCount = NewCount + 1}
-
-if (document.myemailform.blink.checked)
-{NewCount = NewCount + 1}
-
-if (document.myemailform.enlarge.checked)
-{NewCount = NewCount + 1}
-
-if (document.myemailform.flare.checked)
-{NewCount = NewCount + 1}
-
-if (document.myemailform.rollingfog.checked)
-{NewCount = NewCount + 1}
-
-if (NewCount == 4)
-{
-document.myemailform; return false;
-}
-} 
-</SCRIPT>
-</body>
+		<title>Name and Abilities</title>
+		<style>
+			html
+			{
+				background: url("Background.jpg") no-repeat center center fixed;
+				background-size: 100% 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="transbox">
+			<div id="header">
+				<h1>Who are you?</h1>
+			</div>
+			<div id="wrap">
+				<div id="col1">
+					<form name="myemailform" action="http://danelerh.github.io/campaigns/create%20character/confirmation.html">
+						<p>
+							<label for='name'>Name: </label><br>
+							<input type="text" name="name">
+						</p>
+						<p><input type="radio" name="sex" value="male">Male</p>
+						<p><input type="radio" name="sex" value="female">Female</p>
+						<p><input type="radio" name="race" value="dwarf" checked>Dwarf</p>
+						<p><input type="radio" name="variant" value="tall" checked>Tall Dwarf</p>
+						<p><input type="radio" name="class" value="sorcerer" checked>Sorcerer</p>
+				</div>
+				<div id="col2">
+						<p>
+							<label for='cName'>Character name:</label><br>
+							<input type="text" name="cName">
+						</p>
+						<p><INPUT TYPE="checkbox" NAME="rayoffrost" onClick="return KeepCount()"> Ray of Frost</p>
+						<p><INPUT TYPE="checkbox" NAME="blink" onClick="return KeepCount()"> Blink</p>
+						<p><INPUT TYPE="checkbox" NAME="enlarge" onClick="return KeepCount()"> Enlarge</p>
+						<p><INPUT TYPE="checkbox" NAME="flare" onClick="return KeepCount()"> Flare</p>
+						<p><INPUT TYPE="checkbox" NAME="rollingfog" onClick="return KeepCount()"> Rolling Fog</p>
+				</div>
+			</div>
+			<div id="footer">
+						<input type="submit" name='submit' value="submit">
+					</form>
+			</div>
+		</div>
+		<SCRIPT LANGUAGE="javascript">
+			function KeepCount()
+			{
+				var NewCount = 0
+				if (document.myemailform.rayoffrost.checked)
+				{NewCount = NewCount + 1}
+				if (document.myemailform.blink.checked)
+				{NewCount = NewCount + 1}
+				if (document.myemailform.enlarge.checked)
+				{NewCount = NewCount + 1}
+				if (document.myemailform.flare.checked)
+				{NewCount = NewCount + 1}
+				if (document.myemailform.rollingfog.checked)
+				{NewCount = NewCount + 1}
+				if (NewCount == 4)
+				{document.myemailform; return false;}
+			} 
+		</SCRIPT>
+	</body>
 </html>
