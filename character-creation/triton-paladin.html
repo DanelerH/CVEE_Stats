@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="transbox.css">
+		<link rel="stylesheet" type="text/css" href="2column.css">
+		<link rel="shortcut icon" href="favicon.png"/>
+		<title>Name and Abilities</title>
+		<style>
+			html
+			{
+				background: url("Background.jpg") no-repeat center center fixed;
+				background-size: 100% 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="transbox">
+			<div id="header">
+				<h1>Who are you?</h1>
+			</div>
+				<div id="wrap">
+					<div id="col1">
+						<form name="myemailform" action="http://danelerh.github.io/campaigns/create-character/confirmation.html">
+							<p>
+								<label for='name'>Name: </label><br>
+								<input type="text" name="name">
+							</p>
+							<p><input type="radio" name="sex" value="male">Male</p>
+							<p><input type="radio" name="sex" value="female">Female</p>
+							<p><input type="radio" name="race" value="kobold" checked>Kobold</p>
+							<p><input type="radio" name="variant" value="triton" checked>Triton Ground</p>
+							<p><input type="radio" name="class" value="paladin" checked>Paladin</p>
+					</div>
+					<div id="col2">
+							<p>
+								<label for='cName'>Character name:</label><br>
+								<input type="text" name="cName">
+							</p>
+							<p><INPUT TYPE="checkbox" NAME="honorchains" onClick="return KeepCount()"> Honor Chains</p>
+							<p><INPUT TYPE="checkbox" NAME="blessingofstrength" onClick="return KeepCount()"> Blessing of Strength</p>
+							<p><INPUT TYPE="checkbox" NAME="divineintervention" onClick="return KeepCount()"> Divine Intervention</p>
+							<p><INPUT TYPE="checkbox" NAME="righteousfury" onClick="return KeepCount()"> Righteous Fury</p>
+							<p><INPUT TYPE="checkbox" NAME="unholywater" onClick="return KeepCount()"> Unholy Water</p>
+							<p><INPUT TYPE="checkbox" NAME="holylight" onClick="return KeepCount()"> Holy Light</p>
+					</div>
+				</div>
+				<div id="footer">
+							<input type="submit" name='submit' value="submit">
+						</form>
+				</div>
+			</div>
+			<SCRIPT LANGUAGE="javascript">
+			function KeepCount()
+			{
+				var NewCount = 0
+				if (document.myemailform.honorchains.checked)
+				{NewCount = NewCount + 1}
+				if (document.myemailform.blessingofstrength.checked)
+				{NewCount = NewCount + 1}
+				if (document.myemailform.divineintervention.checked)
+				{NewCount = NewCount + 1}
+				if (document.myemailform.righteousfury.checked)
+				{NewCount = NewCount + 1}
+				if (document.myemailform.unholywater.checked)
+				{NewCount = NewCount + 1}
+				if (document.myemailform.holylight.checked)
+				{NewCount = NewCount + 1}
+				if (NewCount == 4)
+				{
+					document.myemailform; return false;
+				}
+			} 
+		</SCRIPT>
+	</body>
+</html>
