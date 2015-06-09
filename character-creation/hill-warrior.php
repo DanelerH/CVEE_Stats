@@ -44,7 +44,6 @@ Abilities:		'.if ($_POST['whirlwind'] == 'value1').'
 }
 ?>
 
-<!doctype html>
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="transbox.css">
