@@ -2,6 +2,16 @@
 
 require("class.phpmailer.php");
 
+$name = $_POST['name'] ;
+$cName = $_POST['cName'] ;
+<input type="radio" name="gender"
+<?php if (isset($gender) && $gender=="female") echo "checked";?>
+value="female">Female
+<input type="radio" name="gender"
+<?php if (isset($gender) && $gender=="male") echo "checked";?>
+value="male">Male
+
+
 $mail = new PHPMailer();
 
 $mail->IsSMTP();

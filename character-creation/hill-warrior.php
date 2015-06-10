@@ -20,26 +20,26 @@ Abilities:		'.if ($_POST['whirlwind'] == 'value1').'
     // Set up SMTP  
     $mail->IsSMTP();                // Sets up a SMTP connection  
     $mail->SMTPAuth = true;         // Connection with the SMTP does require authorization    
+	$mail->SMTPDebug = 2;
     $mail->SMTPSecure = "ssl";      // Connect using a TLS connection  
-    $mail->Host = "smtp.gmail.com";  //Gmail SMTP server address
+    $mail->Host = 'smtp.gmail.com';  //Gmail SMTP server address
     $mail->Port = 465;  //Gmail SMTP port
     $mail->Encoding = '7bit';
     
     // Authentication  
-    $mail->Username   = "danelerhostcrexcum@gmail.com"; // Your full Gmail address
-    $mail->Password   = "Daneler4"; // Your Gmail password
-      
-    // Compose
-    $mail->SetFrom($_POST["danelerhostcrexcum@gmail.com"]);
-    $mail->Subject = "New Character";      // Subject (which isn't required)  
-    $mail->MsgHTML($message);
- 
-    // Send To
+    $mail->Username   = 'danelerhostcrexcum@gmail.com'; // Your full Gmail address
+    $mail->Password   = 'Daneler4'; // Your Gmail password
+
+    $mail->From = 'danelerhostcrexcum@gmail.com';
     $mail->AddAddress("danelerhostcrexcum@gmail.com"); // Where to send it - Recipient
+
+	$mail->isHTML(true);
+	
+    $mail->Subject = 'New Character';      // Subject (which isn't required)
     $result = $mail->Send();		// Send!  
 	$message = $result ? 'Successfully Sent!' : 'Sending Failed!';      
 	unset($mail);
-
+    
 }
 ?>
 
@@ -64,7 +64,7 @@ Abilities:		'.if ($_POST['whirlwind'] == 'value1').'
 			</div>
 			<div id="wrap">
 				<div id="col1">
-					<form name="myemailform" action="" method="post">
+					<form name="myemailform" method="post" action="">
 						<p>
 							<label for='name'>Name: </label><br>
 							<input type="text" name="name">
