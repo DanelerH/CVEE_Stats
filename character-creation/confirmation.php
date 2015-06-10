@@ -15,9 +15,8 @@ $secondaries = implode(', ', $_POST['group2']);
       
     // Set up SMTP  
     $mail->IsSMTP();                // Sets up a SMTP connection  
-    $mail->SMTPAuth = true;         // Connection with the SMTP does require authorization    
-	$mail->SMTPDebug = 2;
-    $mail->SMTPSecure = "ssl";      // Connect using a TLS connection  
+    $mail->SMTPAuth = true;         // Connection with the SMTP does require authorization 
+    $mail->SMTPSecure = "tls";      // Connect using a TLS connection  
     $mail->Host = 'smtp.gmail.com';  //Gmail SMTP server address
     $mail->Port = 465;  //Gmail SMTP port
     $mail->Encoding = '7bit';
@@ -27,8 +26,8 @@ $secondaries = implode(', ', $_POST['group2']);
     $mail->Password   = 'Daneler4'; // Your Gmail password
 
     $mail->From = 'danelerhostcrexcum@gmail.com';
-    $mail->AddAddress("danelerhostcrexcum@gmail.com"); // Where to send it - Recipient
-	$mail->AddAddress('email'); // Where to send it - Recipient
+    $mail->addAddress("danelerhostcrexcum@gmail.com"); // Where to send it - Recipient
+	$mail->addBCC('email'); // Where to send blind carbon copy
 
 	$mail->isHTML(true);
 	
