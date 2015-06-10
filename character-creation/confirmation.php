@@ -16,7 +16,7 @@ $secondaries = implode(', ', $_POST['group2']);
     // Set up SMTP  
     $mail->IsSMTP();                // Sets up a SMTP connection  
     $mail->SMTPAuth = true;         // Connection with the SMTP does require authorization 
-    $mail->SMTPSecure = "tls";      // Connect using a TLS connection  
+    $mail->SMTPSecure = "ssl";      // Connect using a TLS connection  
     $mail->Host = 'smtp.gmail.com';  //Gmail SMTP server address
     $mail->Port = 587;  //Gmail SMTP port
     
