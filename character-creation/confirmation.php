@@ -18,8 +18,7 @@ $secondaries = implode(', ', $_POST['group2']);
     $mail->SMTPAuth = true;         // Connection with the SMTP does require authorization 
     $mail->SMTPSecure = "tls";      // Connect using a TLS connection  
     $mail->Host = 'smtp.gmail.com';  //Gmail SMTP server address
-    $mail->Port = 465;  //Gmail SMTP port
-    $mail->Encoding = '7bit';
+    $mail->Port = 587;  //Gmail SMTP port
     
     // Authentication  
     $mail->Username   = 'danelerhostcrexcum@gmail.com'; // Your full Gmail address
