@@ -2,16 +2,12 @@
 if(isset($_POST['submit'])) 
 {
 
-$name= '.$_POST['name']'
-$cName= '.$_POST['cName']'
-&gender= '.$_POST['sex']'
-$abilities= '.$_POST['name']'
-			'.if ($_POST['whirlwind'] == 'value1').'
-			'.if ($_POST['blockade'] == 'value1').'
-			'.if ($_POST['charge'] == 'value1').'
-			'.if ($_POST['tosser'] == 'value1').'
-			'.if ($_POST['chivalry'] == 'value1').'
-';
+$name= .$_POST['name'];
+$cName= .$_POST['cName'];
+$gender= .$_POST['sex'];
+$abilities = implode(', ', $_POST['group1']);
+$secondaries = implode(', ', $_POST['group2']);
+
     require "phpmailer/class.phpmailer.php"; //include phpmailer class
       
     // Instantiate Class  
@@ -32,6 +28,7 @@ $abilities= '.$_POST['name']'
 
     $mail->From = 'danelerhostcrexcum@gmail.com';
     $mail->AddAddress("danelerhostcrexcum@gmail.com"); // Where to send it - Recipient
+	$mail->AddAddress('email'); // Where to send it - Recipient
 
 	$mail->isHTML(true);
 	
@@ -42,6 +39,7 @@ $abilities= '.$_POST['name']'
                                     <tr><td><strong>Character name:</strong> </td><td>' .$cName. '</td></tr>
                                     <tr><td><strong>Gender:</strong> </td><td>' .$gender. '</td></tr>
                                     <tr><td><strong>Abilities:</strong> </td><td>' .$abilities. '</td></tr>
+									<tr><td><strong></strong> </td><td>' .$secondaries. '</td></tr>
                                     </table>
                                     </body></html>';
     $result = $mail->Send();		// Send!  
