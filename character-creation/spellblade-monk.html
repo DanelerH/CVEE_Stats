@@ -36,130 +36,76 @@
 							<label for='cName'>Character name:</label><br>
 							<input type="text" name="cName">
 						</p>
-						<p><INPUT TYPE="checkbox" NAME="shiftstylepunch" onClick="return KeepCount()"> Shift Style Punch</p>
-						<p><INPUT TYPE="checkbox" NAME="nimbusfamiliar" onClick="return KeepCount()"> Nimbus Familiar</p>
-						<p><INPUT TYPE="checkbox" NAME="soothespirits" onClick="return KeepCount()"> Soothe Spirits</p>
-						<p><INPUT TYPE="checkbox" NAME="forcepillar" onClick="return KeepCount()"> Force Pillar</p>
-						<p><INPUT TYPE="checkbox" NAME="spiritrush" onClick="return KeepCount()"> Spirit Rush</p>
+						<p><INPUT TYPE="checkbox" id="shiftstylepunch" name="abilities[]" value="Shift Style Punch" onClick="CountChecks('listone',3,this)"> Shift Style Punch</p>
+						<p><INPUT TYPE="checkbox" id="nimbusfamiliar" name="abilities[]" value="Nimbus Familiar" onClick="CountChecks('listone',3,this)"> Nimbus Familiar</p>
+						<p><INPUT TYPE="checkbox" id="soothespirits" name="abilities[]" value="Soothe Spirits" onClick="CountChecks('listone',3,this)"> Soothe Spirits</p>
+						<p><INPUT TYPE="checkbox" id="forcepillar" name="abilities[]" value="Force Pillar" onClick="CountChecks('listone',3,this)"> Force Pillar</p>
+						<p><INPUT TYPE="checkbox" id="spiritrush" name="abilities[]" value="Spirit Rush" onClick="CountChecks('listone',3,this)"> Spirit Rush</p>
 				</div>
 			</div><br><br>
 			<div id="wrap">
 				<div id="col1">
-					<p><INPUT TYPE="checkbox" NAME="honorchains" onClick="return KeepCount2()"> Honor Chains</p>
-					<p><INPUT TYPE="checkbox" NAME="blessingofstrength" onClick="return KeepCount2()"> Blessing of Strength</p>
-					<p><INPUT TYPE="checkbox" NAME="divineintervention" onClick="return KeepCount2()"> Divine Intervention</p>
-					<p><INPUT TYPE="checkbox" NAME="holylight" onClick="return KeepCount2()"> Holy Light</p>
-					<p><INPUT TYPE="checkbox" NAME="disguise" onClick="return KeepCount2()"> Disguise</p>
-					<p><INPUT TYPE="checkbox" NAME="yodel" onClick="return KeepCount2()"> Yodel</p>
-					<p><INPUT TYPE="checkbox" NAME="earthquake" onClick="return KeepCount2()"> Earthquake</p>
-					<p><INPUT TYPE="checkbox" NAME="rayoffrost" onClick="return KeepCount2()"> Ray of Frost</p>
-					<p><INPUT TYPE="checkbox" NAME="blink" onClick="return KeepCount2()"> Blink</p>
-					<p><INPUT TYPE="checkbox" NAME="enlarge" onClick="return KeepCount2()"> Enlarge</p>
-					<p><INPUT TYPE="checkbox" NAME="flare" onClick="return KeepCount2()"> Flare</p>
-					<p><INPUT TYPE="checkbox" NAME="rollingfog" onClick="return KeepCount2()"> Rolling Fog</p>
-					<p><INPUT TYPE="checkbox" NAME="callearthlord" onClick="return KeepCount2()"> Call Earthlord</p>
+					<p><INPUT TYPE="checkbox" id="honorchains" name="secondaries[]" value="Honor Chains" onClick="CountChecks('listtwo',2,this)"> Honor Chains</p>
+					<p><INPUT TYPE="checkbox" id="blessingofstrength" name="secondaries[]" value="Blessing of Strength" onClick="CountChecks('listtwo',2,this)"> Blessing of Strength</p>
+					<p><INPUT TYPE="checkbox" id="divineintervention" name="secondaries[]" value="Divine Intervention" onClick="CountChecks('listtwo',2,this)"> Divine Intervention</p>
+					<p><INPUT TYPE="checkbox" id="holylight" name="secondaries[]" value="Holy Light" onClick="CountChecks('listtwo',2,this)"> Holy Light</p>
+					<p><INPUT TYPE="checkbox" id="disguise" name="secondaries[]" value="Disguise" onClick="CountChecks('listtwo',2,this)"> Disguise</p>
+					<p><INPUT TYPE="checkbox" id="yodel" name="secondaries[]" value="Yodel" onClick="CountChecks('listtwo',2,this)"> Yodel</p>
+					<p><INPUT TYPE="checkbox" id="earthquake" name="secondaries[]" value="Earthquake" onClick="CountChecks('listtwo',2,this)"> Earthquake</p>
+					<p><INPUT TYPE="checkbox" id="rayoffrost" name="secondaries[]" value="Ray of Frost" onClick="CountChecks('listtwo',2,this)"> Ray of Frost</p>
+					<p><INPUT TYPE="checkbox" id="blink" name="secondaries[]" value="Blink" onClick="CountChecks('listtwo',2,this)"> Blink</p>
+					<p><INPUT TYPE="checkbox" id="enlarge" name="secondaries[]" value="Enlarge" onClick="CountChecks('listtwo',2,this)"> Enlarge</p>
+					<p><INPUT TYPE="checkbox" id="flare" name="secondaries[]" value="Flare" onClick="CountChecks('listtwo',2,this)"> Flare</p>
+					<p><INPUT TYPE="checkbox" id="rollingfog" name="secondaries[]" value="Rolling Fog" onClick="CountChecks('listtwo',2,this)"> Rolling Fog</p>
+					<p><INPUT TYPE="checkbox" id="callearthlord" name="secondaries[]" value="Call Earthlord" onClick="CountChecks('listtwo',2,this)"> Call Earthlord</p>
+					<p><INPUT TYPE="checkbox" id="icebolt" name="secondaries[]" value="Ice Bolt" onClick="CountChecks('listtwo',2,this)"> Ice Bolt</p>
 				</div>
 				<div id="col2">
-					<p><INPUT TYPE="checkbox" NAME="icebolt" onClick="return KeepCount2()"> Ice Bolt</p>
-					<p><INPUT TYPE="checkbox" NAME="summonairsprites" onClick="return KeepCount2()"> Summon Air Sprites</p>
-					<p><INPUT TYPE="checkbox" NAME="summonfrostelemental" onClick="return KeepCount2()"> Summon Frost Elemental</p>
-					<p><INPUT TYPE="checkbox" NAME="windblast" onClick="return KeepCount2()"> Wind Blast</p>
-					<p><INPUT TYPE="checkbox" NAME="arcanebeam" onClick="return KeepCount2()"> Arcane Beam</p>
-					<p><INPUT TYPE="checkbox" NAME="arcanemissile" onClick="return KeepCount2()"> Arcane Missile</p>
-					<p><INPUT TYPE="checkbox" NAME="blizzard" onClick="return KeepCount2()"> Blizzard</p>
-					<p><INPUT TYPE="checkbox" NAME="fireball" onClick="return KeepCount2()"> Fireball</p>
-					<p><INPUT TYPE="checkbox" NAME="iceblast" onClick="return KeepCount2()"> Ice Blast</p>
-					<p><INPUT TYPE="checkbox" NAME="blanketofdarkness" onClick="return KeepCount2()"> Blanket of Darkness</p>
-					<p><INPUT TYPE="checkbox" NAME="grandravensclaw" onClick="return KeepCount2()"> Grand Raven's Claw</p>
-					<p><INPUT TYPE="checkbox" NAME="lifedrain" onClick="return KeepCount2()"> Lifedrain</p>
-					<p><INPUT TYPE="checkbox" NAME="nearsight" onClick="return KeepCount2()"> Nearsight</p>
-					<p><INPUT TYPE="checkbox" NAME="pestilence" onClick="return KeepCount2()"> Pestilence</p>
+					<p><INPUT TYPE="checkbox" id="summonairsprites" name="secondaries[]" value="Summon Air Sprite" onClick="CountChecks('listtwo',2,this)"> Summon Air Sprites</p>
+					<p><INPUT TYPE="checkbox" id="summonfrostelemental" name="secondaries[]" value="Summon Frost Elemental" onClick="CountChecks('listtwo',2,this)"> Summon Frost Elemental</p>
+					<p><INPUT TYPE="checkbox" id="windblast" name="secondaries[]" value="Wind Blast" onClick="CountChecks('listtwo',2,this)"> Wind Blast</p>
+					<p><INPUT TYPE="checkbox" id="arcanebeam" name="secondaries[]" value="Arcane Beam" onClick="CountChecks('listtwo',2,this)"> Arcane Beam</p>
+					<p><INPUT TYPE="checkbox" id="arcanemissile" name="secondaries[]" value="Arcane Missile" onClick="CountChecks('listtwo',2,this)"> Arcane Missile</p>
+					<p><INPUT TYPE="checkbox" id="blizzard" name="secondaries[]" value="Blizzard" onClick="CountChecks('listtwo',2,this)"> Blizzard</p>
+					<p><INPUT TYPE="checkbox" id="fireball" name="secondaries[]" value="Fireball" onClick="CountChecks('listtwo',2,this)"> Fireball</p>
+					<p><INPUT TYPE="checkbox" id="iceblast" name="secondaries[]" value="Ice Blast" onClick="CountChecks('listtwo',2,this)"> Ice Blast</p>
+					<p><INPUT TYPE="checkbox" id="blanketofdarkness" name="abilities[]" value="Blanket of Darkness" onClick="CountChecks('listtwo',2,this)"> Blanket of Darkness</p>
+					<p><INPUT TYPE="checkbox" id="grandravensclaw" name="abilities[]" value="Grand Raven's Claw" onClick="CountChecks('listtwo',2,this)"> Grand Raven's Claw</p>
+					<p><INPUT TYPE="checkbox" id="lifedrain" name="abilities[]" value="Lifedrain" onClick="CountChecks('listtwo',2,this)"> Lifedrain</p>
+					<p><INPUT TYPE="checkbox" id="nearsight" name="abilities[]" value="Nearsight" onClick="CountChecks('listtwo',2,this)"> Nearsight</p>
+					<p><INPUT TYPE="checkbox" id="pestilence" name="abilities[]" value="Pestilence" onClick="CountChecks('listtwo',2,this)"> Pestilence</p>
 				</div>
-			</div><br>
-			<div id="footer"><br><br>
+			</div>
+			<div id="footer">
+					<p>
+						<label for='email'>If you would like to receive a copy of your character information, please enter your email: </label>
+						<input type="text" name="email">
+					</p>
 					<input type="submit" name='submit' value="submit">
 				</form>
 			</div>
 		</div>
 		<SCRIPT LANGUAGE="javascript">
-			function KeepCount()
+			function CountChecks(whichlist,maxchecked,latestcheck)
 			{
-				var NewCount = 0
-				if (document.myemailform.shiftstylepunch.checked)
-				{NewCount = NewCount + 1}
-				if (document.myemailform.nimbusfamiliar.checked)
-				{NewCount = NewCount + 1
-				if (document.myemailform.soothespirits.checked)
-				{NewCount = NewCount + 1}
-				if (document.myemailform.forcepillar.checked)
-				{NewCount = NewCount + 1}
-				if (document.myemailform.spiritrush.checked)
-				{NewCount = NewCount + 1}
-				if (NewCount == 4)
-				{document.myemailform; return false;}
-			} 
-		</SCRIPT>
-		<SCRIPT LANGUAGE="javascript">
-			function KeepCount2()
-			{
-				var NewCount2 = 0
-				if (document.myemailform.honorchains.checked)
-				{NewCount2 = NewCount2 + 1}
-				if (document.myemailform.blessingofstrength.checked)
-				{NewCount2 = NewCount2 + 1}
-				if (document.myemailform.divineintervention.checked)
-				{NewCount2 = NewCount2 + 1}
-				if (document.myemailform.holylight.checked)
-				{NewCount2 = NewCount2 + 1}
-				if (document.myemailform.disguise.checked)
-				{NewCount2 = NewCount2 + 1}
-				if (document.myemailform.yodel.checked)
-				{NewCount2 = NewCount2 + 1}
-				if (document.myemailform.earthquake.checked)
-				{NewCount2 = NewCount2 + 1}
-				if (document.myemailform.rayoffrost.checked)
-				{NewCount2 = NewCount2 + 1}
-				if (document.myemailform.blink.checked)
-				{NewCount2 = NewCount2 + 1}
-				if (document.myemailform.enlarge.checked)
-				{NewCount2 = NewCount2 + 1}
-				if (document.myemailform.flare.checked)
-				{NewCount2 = NewCount2 + 1}
-				if (document.myemailform.rollingfog.checked)
-				{NewCount2 = NewCount2 + 1}
-				if (document.myemailform.callearthlord.checked)
-				{NewCount2 = NewCount2 + 1}
-				if (document.myemailform.icebolt.checked)
-				{NewCount2 = NewCount2 + 1}
-				if (document.myemailform.summonairsprites.checked)
-				{NewCount2 = NewCount2 + 1}
-				if (document.myemailform.summonfrostelemental.checked)
-				{NewCount2 = NewCount2 + 1}
-				if (document.myemailform.windblast.checked)
-				{NewCount2 = NewCount2 + 1}
-				if (document.myemailform.arcanebeam.checked)
-				{NewCount2 = NewCount2 + 1}
-				if (document.myemailform.arcanemissile.checked)
-				{NewCount2 = NewCount2 + 1}
-				if (document.myemailform.blizzard.checked)
-				{NewCount2 = NewCount2 + 1}
-				if (document.myemailform.fireball.checked)
-				{NewCount2 = NewCount2 + 1}
-				if (document.myemailform.iceblast.checked)
-				{NewCount2 = NewCount2 + 1}
-				if (document.myemailform.blanketofdarkness.checked)
-				{NewCount2 = NewCount2 + 1}
-				if (document.myemailform.grandravensclaw.checked)
-				{NewCount2 = NewCount2 + 1}
-				if (document.myemailform.lifedrain.checked)
-				{NewCount2 = NewCount2 + 1}
-				if (document.myemailform.nearsight.checked)
-				{NewCount2 = NewCount2 + 1}
-				if (document.myemailform.pestilence.checked)
-				{NewCount2 = NewCount2 + 1}
-				if (NewCount2 == 3)
-				{document.myemailform; return false;}
-			} 
+				//  An array containing the id of each checkbox to monitor. 
+				//  List the id of each checkbox in the set. If more than 
+				//  one set, list other sets in their own arrays. The
+				//  array name to use is passed to this function.
+				var listone = new Array("shiftstylepunch", "nimbusfamiliar", "soothespirits", "forcepillar", "spiritrush");
+				var listtwo = new Array("honorchains", "blessingofstrength", "divineintervention", "holylight", "disguise",
+				"yodel", "earthquake", "rayoffrost", "blink", "enlarge", "flare", "rollingfog", "callearthlord", "icebolt",
+				"summonairsprites", "summonfrostelemental", "windblast", "arcanebeam", "arcanemissile", "blizzard", "fireball",
+				"iceblast", "blanketofdarkness", "grandravensclaw", "lifedrain", "nearsight", "pestilence");
+				var iterationlist;
+				eval("iterationlist="+whichlist);
+				var count = 0;
+				for( var i=0; i<iterationlist.length; i++ )
+				{
+				   if( document.getElementById(iterationlist[i]).checked == true) { count++; }
+				   if( count > maxchecked ) { latestcheck.checked = false; }
+				}
+			}
 		</SCRIPT>
 	</body>
 </html>
