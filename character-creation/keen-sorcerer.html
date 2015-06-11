@@ -20,7 +20,7 @@
 			</div>
 			<div id="wrap">
 				<div id="col1">
-					<form name="myemailform" action="http://danelerh.github.io/campaigns/character-creation/confirmation.html">
+					<form name="myemailform" action="http://danelerh.byethost17.com/character-creation/confirmation.html">
 						<p>
 							<label for='name'>Name: </label><br>
 							<input type="text" name="name">
@@ -36,35 +36,35 @@
 							<label for='cName'>Character name:</label><br>
 							<input type="text" name="cName">
 						</p>
-						<p><INPUT TYPE="checkbox" NAME="rayoffrost" onClick="return KeepCount()"> Ray of Frost</p>
-						<p><INPUT TYPE="checkbox" NAME="blink" onClick="return KeepCount()"> Blink</p>
-						<p><INPUT TYPE="checkbox" NAME="enlarge" onClick="return KeepCount()"> Enlarge</p>
-						<p><INPUT TYPE="checkbox" NAME="flare" onClick="return KeepCount()"> Flare</p>
-						<p><INPUT TYPE="checkbox" NAME="rollingfog" onClick="return KeepCount()"> Rolling Fog</p>
+							<p><INPUT TYPE="checkbox" id="rayoffrost" name="abilities[]" value="Ray of Frost" onClick="CountChecks('listone',3,this)"> Ray of Frost</p>
+							<p><INPUT TYPE="checkbox" id="blink" name="abilities[]" value="Blink" onClick="CountChecks('listone',3,this)"> Blink</p>
+							<p><INPUT TYPE="checkbox" id="enlarge" name="abilities[]" value="Enlarge" onClick="CountChecks('listone',3,this)"> Enlarge</p>
+							<p><INPUT TYPE="checkbox" id="flare" name="abilities[]" value="Flare" onClick="CountChecks('listone',3,this)"> Flare</p>
+							<p><INPUT TYPE="checkbox" id="rollingfog" name="abilities[]" value="Rolling Fog" onClick="CountChecks('listone',3,this)"> Rolling Fog</p>
+					</div>
+				</div>
+				<div id="footer">
+							<input type="submit" name='submit' value="submit">
+						</form>
 				</div>
 			</div>
-			<div id="footer">
-						<input type="submit" name='submit' value="submit">
-					</form>
-			</div>
-		</div>
-		<SCRIPT LANGUAGE="javascript">
-			function KeepCount()
+			<SCRIPT LANGUAGE="javascript">
+			function CountChecks(whichlist,maxchecked,latestcheck)
 			{
-				var NewCount = 0
-				if (document.myemailform.rayoffrost.checked)
-				{NewCount = NewCount + 1}
-				if (document.myemailform.blink.checked)
-				{NewCount = NewCount + 1}
-				if (document.myemailform.enlarge.checked)
-				{NewCount = NewCount + 1}
-				if (document.myemailform.flare.checked)
-				{NewCount = NewCount + 1}
-				if (document.myemailform.rollingfog.checked)
-				{NewCount = NewCount + 1}
-				if (NewCount == 4)
-				{document.myemailform; return false;}
-			} 
+				//  An array containing the id of each checkbox to monitor. 
+				//  List the id of each checkbox in the set. If more than 
+				//  one set, list other sets in their own arrays. The
+				//  array name to use is passed to this function.
+				var listone = new Array("rayoffrost", "blink", "enlarge", "flare", "rollingfog");
+				var iterationlist;
+				eval("iterationlist="+whichlist);
+				var count = 0;
+				for( var i=0; i<iterationlist.length; i++ )
+				{
+				   if( document.getElementById(iterationlist[i]).checked == true) { count++; }
+				   if( count > maxchecked ) { latestcheck.checked = false; }
+				}
+			}
 		</SCRIPT>
 	</body>
 </html>

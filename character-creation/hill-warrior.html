@@ -20,7 +20,7 @@
 			</div>
 			<div id="wrap">
 				<div id="col1">
-					<form name="myemailform" method="post" action="confirmation.php">
+					<form name="myemailform" method="post" action="confirmation.html">
 						<p>
 							<label for='name'>Name: </label><br>
 							<input type="text" name="name">
@@ -36,23 +36,19 @@
 							<label for='cName'>Character name:</label><br>
 							<input type="text" name="cName">
 						</p>
-						<p><INPUT id="whirlwind" TYPE="checkbox" name="abilities[]" value="Whirlwind" onClick="CountChecks('listone',3,this)"> Whirlwind</p>
-						<p><INPUT id="blockade" TYPE="checkbox" name="abilities[]" value="Blockade" onClick="CountChecks('listone',3,this)"> Blockade</p>
-						<p><INPUT id="charge" TYPE="checkbox" name="abilities[]" value="Charge" onClick="CountChecks('listone',3,this)"> Charge</p>
-						<p><INPUT id="tosser" TYPE="checkbox" name="abilities[]" value="Tosser" onClick="CountChecks('listone',3,this)"> Tosser</p>
-						<p><INPUT id="chivalry" TYPE="checkbox" name="abilities[]" value="Chivalry" onClick="CountChecks('listone',3,this)"> Chivalry</p>
+						<p><INPUT TYPE="checkbox" id="whirlwind" name="abilities[]" value="Whirlwind" onClick="CountChecks('listone',3,this)"> Whirlwind</p>
+						<p><INPUT TYPE="checkbox" id="blockade" name="abilities[]" value="Blockade" onClick="CountChecks('listone',3,this)"> Blockade</p>
+						<p><INPUT TYPE="checkbox" id="charge" name="abilities[]" value="Charge" onClick="CountChecks('listone',3,this)"> Charge</p>
+						<p><INPUT TYPE="checkbox" id="tosser" name="abilities[]" value="Tosser" onClick="CountChecks('listone',3,this)"> Tosser</p>
+						<p><INPUT TYPE="checkbox" id="chivalry" name="abilities[]" value="Chivalry" onClick="CountChecks('listone',3,this)"> Chivalry</p>
 				</div>
 			</div>
 			<div id="footer">
-						<p>
-							<label for='email'>If you would like to receive a copy of your character information, please enter your email: </label>
-							<input type="text" name="email">
-						</p>
 						<input type="submit" name='submit' value="submit">
 					</form>
 			</div>
 		</div>
-		<script type="text/javascript">
+		<SCRIPT LANGUAGE="javascript">
 			function CountChecks(whichlist,maxchecked,latestcheck)
 			{
 				//  An array containing the id of each checkbox to monitor. 

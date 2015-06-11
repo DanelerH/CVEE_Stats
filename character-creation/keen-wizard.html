@@ -20,7 +20,7 @@
 			</div>
 			<div id="wrap">
 				<div id="col1">
-					<form name="myemailform" action="http://danelerh.github.io/campaigns/character-creation/confirmation.html">
+					<form name="myemailform" action="http://danelerh.byethost17.com/character-creation/confirmation.html">
 						<p>
 							<label for='name'>First name: </label><br>
 							<input type="text" name="name">
@@ -36,11 +36,11 @@
 							<label for='email'>Last name:</label><br>
 							<input type="text" name="email">
 						</p>
-						<p><INPUT TYPE="checkbox" NAME="arcanebeam" onClick="return KeepCount()"> Arcane Beam</p>
-						<p><INPUT TYPE="checkbox" NAME="arcanemissile" onClick="return KeepCount()"> Arcane Missile</p>
-						<p><INPUT TYPE="checkbox" NAME="blizzard" onClick="return KeepCount()"> Blizzard</p>
-						<p><INPUT TYPE="checkbox" NAME="fireball" onClick="return KeepCount()"> Fireball</p>
-						<p><INPUT TYPE="checkbox" NAME="iceblast" onClick="return KeepCount()"> Ice Blast</p>
+						<p><INPUT TYPE="checkbox" id="arcanebeam" name="abilities[]" value="Arcane Beam" onClick="CountChecks('listone',3,this)"> Arcane Beam</p>
+						<p><INPUT TYPE="checkbox" id="arcanemissile" name="abilities[]" value="Arcane Missile" onClick="CountChecks('listone',3,this)"> Arcane Missile</p>
+						<p><INPUT TYPE="checkbox" id="blizzard" name="abilities[]" value="Blizzard" onClick="CountChecks('listone',3,this)"> Blizzard</p>
+						<p><INPUT TYPE="checkbox" id="fireball" name="abilities[]" value="Fireball" onClick="CountChecks('listone',3,this)"> Fireball</p>
+						<p><INPUT TYPE="checkbox" id="iceblast" name="abilities[]" value="Ice Blast" onClick="CountChecks('listone',3,this)"> Ice Blast</p>
 				</div>
 			</div>
 			<div id="footer">
@@ -49,21 +49,21 @@
 			</div>
 		</div>
 		<SCRIPT LANGUAGE="javascript">
-			function KeepCount()
+			function CountChecks(whichlist,maxchecked,latestcheck)
 			{
-				var NewCount = 0
-				if (document.myemailform.arcanebeam.checked)
-				{NewCount = NewCount + 1}
-				if (document.myemailform.arcanemissile.checked)
-				{NewCount = NewCount + 1}
-				if (document.myemailform.blizzard.checked)
-				{NewCount = NewCount + 1}
-				if (document.myemailform.fireball.checked)
-				{NewCount = NewCount + 1}
-				if (document.myemailform.iceblast.checked)
-				{NewCount = NewCount + 1}
-				if (NewCount == 4)
-				{document.myemailform; return false;}
+				//  An array containing the id of each checkbox to monitor. 
+				//  List the id of each checkbox in the set. If more than 
+				//  one set, list other sets in their own arrays. The
+				//  array name to use is passed to this function.
+				var listone = new Array("arcanebeam", "arcanemissile", "blizzard", "fireball", "iceblast");
+				var iterationlist;
+				eval("iterationlist="+whichlist);
+				var count = 0;
+				for( var i=0; i<iterationlist.length; i++ )
+				{
+				   if( document.getElementById(iterationlist[i]).checked == true) { count++; }
+				   if( count > maxchecked ) { latestcheck.checked = false; }
+				}
 			}
 		</SCRIPT>
 	</body>
