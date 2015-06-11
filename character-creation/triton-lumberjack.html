@@ -20,7 +20,7 @@
 			</div>
 			<div id="wrap">
 				<div id="col1">
-					<form name="myemailform" action="http://danelerh.byethost17.com/character-creation/confirmation.html">
+					<form name="myemailform" action="http://danelerh.github.io/character-creation/confirmation.html">
 						<p>
 							<label for='name'>Name: </label><br>
 							<input type="text" name="name">
@@ -36,38 +36,39 @@
 							<label for='cName'>Character name:</label><br>
 							<input type="text" name="cName">
 						</p>
-						
-						<p><INPUT TYPE="checkbox" NAME="paincake" onClick="return KeepCount()"> Paincake</p>
-						<p><INPUT TYPE="checkbox" NAME="mount" onClick="return KeepCount()"> Mount</p>
-						<p><INPUT TYPE="checkbox" NAME="yodel" onClick="return KeepCount()"> Yodel</p>
-						<p><INPUT TYPE="checkbox" NAME="earthquake" onClick="return KeepCount()"> Earthquake</p>
-						<p><INPUT TYPE="checkbox" NAME="woodlandcompanion" onClick="return KeepCount()"> Woodland Companion</p>
+						<p><INPUT TYPE="checkbox" id="paincake" name="abilities[]" value="Paincake" onClick="CountChecks('listone',3,this)"> Paincake</p>
+						<p><INPUT TYPE="checkbox" id="mount" name="abilities[]" value="Mount" onClick="CountChecks('listone',3,this)"> Mount</p>
+						<p><INPUT TYPE="checkbox" id="yodel" name="abilities[]" value="Yodel" onClick="CountChecks('listone',3,this)"> Yodel</p>
+						<p><INPUT TYPE="checkbox" id="earthquake" name="abilities[]" value="Earthquake" onClick="CountChecks('listone',3,this)"> Earthquake</p>
+						<p><INPUT TYPE="checkbox" id="woodlandcompanion" name="abilities[]" value="Woodland Companion" onClick="CountChecks('listone',3,this)"> Woodland Companion</p>
 				</div>
 			</div>
 			<div id="footer">
+					<p>
+						<label for='email'>If you would like to receive a copy of your character information, please enter your email: </label>
+						<input type="text" name="email">
+					</p>
 						<input type="submit" name='submit' value="submit">
 					</form>
 			</div>
 		</div>
 		<SCRIPT LANGUAGE="javascript">
-			function KeepCount()
+			function CountChecks(whichlist,maxchecked,latestcheck)
 			{
-				var NewCount = 0
-				if (document.myemailform.paincake.checked)
-				{NewCount = NewCount + 1}
-				if (document.myemailform.mount.checked)
-				{NewCount = NewCount + 1
-				if (document.myemailform.yodel.checked)
-				{NewCount = NewCount + 1}
-				if (document.myemailform.earthquake.checked)
-				{NewCount = NewCount + 1}
-				if (document.myemailform.woodlandcompanion.checked)
-				{NewCount = NewCount + 1}
-				if (NewCount == 4)
+				//  An array containing the id of each checkbox to monitor. 
+				//  List the id of each checkbox in the set. If more than 
+				//  one set, list other sets in their own arrays. The
+				//  array name to use is passed to this function.
+				var listone = new Array("paincake", "mount", "yodel", "earthquake", "woodlandcompanion");
+				var iterationlist;
+				eval("iterationlist="+whichlist);
+				var count = 0;
+				for( var i=0; i<iterationlist.length; i++ )
 				{
-					document.myemailform; return false;
+				   if( document.getElementById(iterationlist[i]).checked == true) { count++; }
+				   if( count > maxchecked ) { latestcheck.checked = false; }
 				}
-			} 
+			}
 		</SCRIPT>
 	</body>
 </html>

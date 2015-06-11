@@ -20,7 +20,7 @@
 			</div>
 			<div id="wrap">
 				<div id="col1">
-					<form name="myemailform" action="http://danelerh.byethost17.com/character-creation/confirmation.html">
+					<form name="myemailform" action="http://danelerh.github.io/character-creation/confirmation.html">
 						<p>
 							<label for='name'>Name: </label><br>
 							<input type="text" name="name">
@@ -36,37 +36,39 @@
 							<label for='cName'>Character name:</label><br>
 							<input type="text" name="cName">
 						</p>
-						<p><INPUT TYPE="checkbox" NAME="borrow" onClick="return KeepCount()"> Borrow</p>
-						<p><INPUT TYPE="checkbox" NAME="charm" onClick="return KeepCount()"> Charm</p>
-						<p><INPUT TYPE="checkbox" NAME="doubledown" onClick="return KeepCount()"> Double Down</p>
-						<p><INPUT TYPE="checkbox" NAME="lullaby" onClick="return KeepCount()"> Lullaby</p>
-						<p><INPUT TYPE="checkbox" NAME="disguise" onClick="return KeepCount()"> Disguise</p>
+						<p><INPUT TYPE="checkbox" id="borrow" name="abilities[]" value="Borrow" onClick="CountChecks('listone',3,this)"> Borrow</p>
+						<p><INPUT TYPE="checkbox" id="charm" name="abilities[]" value="Charm" onClick="CountChecks('listone',3,this)"> Charm</p>
+						<p><INPUT TYPE="checkbox" id="doubledown" name="abilities[]" value="Double Down" onClick="CountChecks('listone',3,this)"> Double Down</p>
+						<p><INPUT TYPE="checkbox" id="lullaby" name="abilities[]" value="Lullaby" onClick="CountChecks('listone',3,this)"> Lullaby</p>
+						<p><INPUT TYPE="checkbox" id="disguise" name="abilities[]" value="Disguise" onClick="CountChecks('listone',3,this)"> Disguise</p>
 				</div>
 			</div>
 			<div id="footer">
+					<p>
+						<label for='email'>If you would like to receive a copy of your character information, please enter your email: </label>
+						<input type="text" name="email">
+					</p>
 						<input type="submit" name='submit' value="submit">
 					</form>
 			</div>
 		</div>
 		<SCRIPT LANGUAGE="javascript">
-			function KeepCount()
+			function CountChecks(whichlist,maxchecked,latestcheck)
 			{
-				var NewCount = 0
-				if (document.myemailform.borrow.checked)
-				{NewCount = NewCount + 1}
-				if (document.myemailform.charm.checked)
-				{NewCount = NewCount + 1
-				if (document.myemailform.doubledown.checked)
-				{NewCount = NewCount + 1}
-				if (document.myemailform.lullaby.checked)
-				{NewCount = NewCount + 1}
-				if (document.myemailform.disguise.checked)
-				{NewCount = NewCount + 1}
-				if (NewCount == 4)
+				//  An array containing the id of each checkbox to monitor. 
+				//  List the id of each checkbox in the set. If more than 
+				//  one set, list other sets in their own arrays. The
+				//  array name to use is passed to this function.
+				var listone = new Array("borrow", "charm", "doubledown", "lullaby", "disguise");
+				var iterationlist;
+				eval("iterationlist="+whichlist);
+				var count = 0;
+				for( var i=0; i<iterationlist.length; i++ )
 				{
-					document.myemailform; return false;
+				   if( document.getElementById(iterationlist[i]).checked == true) { count++; }
+				   if( count > maxchecked ) { latestcheck.checked = false; }
 				}
-			} 
+			}
 		</SCRIPT>
 	</body>
 </html>

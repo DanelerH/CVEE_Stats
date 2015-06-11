@@ -20,7 +20,7 @@
 			</div>
 			<div id="wrap">
 				<div id="col1">
-					<form name="myemailform" action="http://danelerh.byethost17.com/character-creation/confirmation.html">
+					<form name="myemailform" action="http://danelerh.github.io/character-creation/confirmation.html">
 						<p>
 							<label for='name'>Name: </label><br>
 							<input type="text" name="name">
@@ -36,35 +36,39 @@
 								<label for='cName'>Character name:</label><br>
 								<input type="text" name="cName">
 							</p>
-							<p><INPUT TYPE="checkbox" NAME="blanketofdarkness" onClick="return KeepCount()"> Blanket of Darkness</p>
-							<p><INPUT TYPE="checkbox" NAME="grandravensclaw" onClick="return KeepCount()"> Grand Raven's Claw</p>
-							<p><INPUT TYPE="checkbox" NAME="lifedrain" onClick="return KeepCount()"> Lifedrain</p>
-							<p><INPUT TYPE="checkbox" NAME="nearsight" onClick="return KeepCount()"> Nearsight</p>
-							<p><INPUT TYPE="checkbox" NAME="pestilence" onClick="return KeepCount()"> Pestilence</p>
+							<p><INPUT TYPE="checkbox" id="blanketofdarkness" name="abilities[]" value="Blanket of Darkness" onClick="CountChecks('listone',3,this)"> Blanket of Darkness</p>
+							<p><INPUT TYPE="checkbox" id="grandravensclaw" name="abilities[]" value="Grand Raven's Claw" onClick="CountChecks('listone',3,this)"> Grand Raven's Claw</p>
+							<p><INPUT TYPE="checkbox" id="lifedrain" name="abilities[]" value="Lifedrain" onClick="CountChecks('listone',3,this)"> Lifedrain</p>
+							<p><INPUT TYPE="checkbox" id="nearsight" name="abilities[]" value="Nearsight" onClick="CountChecks('listone',3,this)"> Nearsight</p>
+							<p><INPUT TYPE="checkbox" id="pestilence" name="abilities[]" value="Pestilence" onClick="CountChecks('listone',3,this)"> Pestilence</p>
 					</div>
 				</div>
 				<div id="footer">
+					<p>
+						<label for='email'>If you would like to receive a copy of your character information, please enter your email: </label>
+						<input type="text" name="email">
+					</p>
 					<input type="submit" name='submit' value="submit">
 				</form>
 			</div>
 		</div>
 		<SCRIPT LANGUAGE="javascript">
-			function KeepCount()
+			function CountChecks(whichlist,maxchecked,latestcheck)
 			{
-				var NewCount = 0
-				if (document.myemailform.blanketofdarkness.checked)
-				{NewCount = NewCount + 1}
-				if (document.myemailform.grandravensclaw.checked)
-				{NewCount = NewCount + 1
-				if (document.myemailform.lifedrain.checked)
-				{NewCount = NewCount + 1}
-				if (document.myemailform.nearsight.checked)
-				{NewCount = NewCount + 1}
-				if (document.myemailform.pestilence.checked)
-				{NewCount = NewCount + 1}
-				if (NewCount == 4)
-				{document.myemailform; return false;}
-			} 
+				//  An array containing the id of each checkbox to monitor. 
+				//  List the id of each checkbox in the set. If more than 
+				//  one set, list other sets in their own arrays. The
+				//  array name to use is passed to this function.
+				var listone = new Array("blanketofdarkness", "grandravensclaw", "lifedrain", "nearsight", "pestilence");
+				var iterationlist;
+				eval("iterationlist="+whichlist);
+				var count = 0;
+				for( var i=0; i<iterationlist.length; i++ )
+				{
+				   if( document.getElementById(iterationlist[i]).checked == true) { count++; }
+				   if( count > maxchecked ) { latestcheck.checked = false; }
+				}
+			}
 		</SCRIPT>
 	</body>
 </html>

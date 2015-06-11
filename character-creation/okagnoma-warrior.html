@@ -20,7 +20,7 @@
 			</div>
 			<div id="wrap">
 				<div id="col1">
-					<form name="myemailform" action="http://danelerh.byethost17.com/character-creation/confirmation.html">
+					<form name="myemailform" action="http://danelerh.github.io/character-creation/confirmation.html">
 						<p>
 							<label for='name'>Name: </label><br>
 							<input type="text" name="name">
@@ -36,35 +36,39 @@
 							<label for='cName'>Character name:</label><br>
 							<input type="text" name="cName">
 						</p>
-						<p><INPUT TYPE="checkbox" NAME="whirlwind" onClick="return KeepCount()"> Whirlwind</p>
-						<p><INPUT TYPE="checkbox" NAME="blockade" onClick="return KeepCount()"> Blockade</p>
-						<p><INPUT TYPE="checkbox" NAME="charge" onClick="return KeepCount()"> Charge</p>
-						<p><INPUT TYPE="checkbox" NAME="tosser" onClick="return KeepCount()"> Tosser</p>
-						<p><INPUT TYPE="checkbox" NAME="chivalry" onClick="return KeepCount()"> Chivalry</p>
+						<p><INPUT TYPE="checkbox" id="whirlwind" name="abilities[]" value="Whirlwind" onClick="CountChecks('listone',3,this)"> Whirlwind</p>
+						<p><INPUT TYPE="checkbox" id="blockade" name="abilities[]" value="Blockade" onClick="CountChecks('listone',3,this)"> Blockade</p>
+						<p><INPUT TYPE="checkbox" id="charge" name="abilities[]" value="Charge" onClick="CountChecks('listone',3,this)"> Charge</p>
+						<p><INPUT TYPE="checkbox" id="tosser" name="abilities[]" value="Tosser" onClick="CountChecks('listone',3,this)"> Tosser</p>
+						<p><INPUT TYPE="checkbox" id="chivalry" name="abilities[]" value="Chivalry" onClick="CountChecks('listone',3,this)"> Chivalry</p>
 				</div>
 			</div>
 			<div id="footer">
+					<p>
+						<label for='email'>If you would like to receive a copy of your character information, please enter your email: </label>
+						<input type="text" name="email">
+					</p>
 						<input type="submit" name='submit' value="submit">
 					</form>
 			</div>
 		</div>
 		<SCRIPT LANGUAGE="javascript">
-			function KeepCount()
+			function CountChecks(whichlist,maxchecked,latestcheck)
 			{
-				var NewCount = 0
-				if (document.myemailform.whirlwind.checked)
-				{NewCount = NewCount + 1}
-				if (document.myemailform.blockade.checked)
-				{NewCount = NewCount + 1}
-				if (document.myemailform.charge.checked)
-				{NewCount = NewCount + 1}
-				if (document.myemailform.tosser.checked)
-				{NewCount = NewCount + 1}
-				if (document.myemailform.chivalry.checked)
-				{NewCount = NewCount + 1}
-				if (NewCount == 4)
-				{document.myemailform; return false;}
-			} 
-		</SCRIPT>
+				//  An array containing the id of each checkbox to monitor. 
+				//  List the id of each checkbox in the set. If more than 
+				//  one set, list other sets in their own arrays. The
+				//  array name to use is passed to this function.
+				var listone = new Array("whirlwind", "blockade", "charge", "tosser", "chivalry");
+				var iterationlist;
+				eval("iterationlist="+whichlist);
+				var count = 0;
+				for( var i=0; i<iterationlist.length; i++ )
+				{
+				   if( document.getElementById(iterationlist[i]).checked == true) { count++; }
+				   if( count > maxchecked ) { latestcheck.checked = false; }
+				}
+			}
+		</script>
 	</body>
 </html>

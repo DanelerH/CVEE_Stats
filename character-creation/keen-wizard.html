@@ -20,9 +20,9 @@
 			</div>
 			<div id="wrap">
 				<div id="col1">
-					<form name="myemailform" action="http://danelerh.byethost17.com/character-creation/confirmation.html">
+					<form name="myemailform" action="http://danelerh.github.io/character-creation/confirmation.html">
 						<p>
-							<label for='name'>First name: </label><br>
+							<label for='name'>Name: </label><br>
 							<input type="text" name="name">
 						</p>
 						<p><input type="radio" name="sex" value="male">Male</p>
@@ -33,8 +33,8 @@
 				</div>
 				<div id="col2">
 						<p>
-							<label for='email'>Last name:</label><br>
-							<input type="text" name="email">
+							<label for='cName'>Character name:</label><br>
+							<input type="text" name="cName">
 						</p>
 						<p><INPUT TYPE="checkbox" id="arcanebeam" name="abilities[]" value="Arcane Beam" onClick="CountChecks('listone',3,this)"> Arcane Beam</p>
 						<p><INPUT TYPE="checkbox" id="arcanemissile" name="abilities[]" value="Arcane Missile" onClick="CountChecks('listone',3,this)"> Arcane Missile</p>
@@ -44,6 +44,10 @@
 				</div>
 			</div>
 			<div id="footer">
+					<p>
+						<label for='email'>If you would like to receive a copy of your character information, please enter your email: </label>
+						<input type="text" name="email">
+					</p>
 						<input type="submit" name='submit' value="submit">
 					</form>
 			</div>
